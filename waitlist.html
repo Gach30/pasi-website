@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Waitlist — Pasi</title>
+<meta name="description" content="Únete al waitlist de Pasi. Sé de los primeros en invertir en acciones de EE.UU. desde Venezuela." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#888888;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
+html{scroll-behavior:smooth;background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{background:var(--black);overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+.label{font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 0;transition:background .3s,backdrop-filter .3s}
+nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--white-06)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem);display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--white)}
+.nav-logo .logo-text{font-size:1.25rem;font-weight:700;letter-spacing:-.5px}
+.nav-back{color:var(--gray);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s;display:flex;align-items:center;gap:.375rem}
+.nav-back:hover{color:var(--white)}
+.waitlist-page{flex:1;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 4rem;position:relative}
+.waitlist-page .bg-grid{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;opacity:.15;mask-image:radial-gradient(ellipse 60% 50% at 50% 45%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 45%,black 20%,transparent 70%)}
+.waitlist-page .bg-glow-1{position:absolute;width:600px;height:600px;left:50%;top:35%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.07) 0%,transparent 55%);pointer-events:none}
+.waitlist-page .bg-glow-2{position:absolute;width:400px;height:400px;left:25%;top:65%;background:radial-gradient(circle,rgba(0,224,158,0.03) 0%,transparent 60%);pointer-events:none}
+.waitlist-page .bg-glow-3{position:absolute;width:350px;height:350px;right:15%;top:25%;background:radial-gradient(circle,rgba(0,224,158,0.03) 0%,transparent 60%);pointer-events:none}
+.waitlist-content{position:relative;z-index:1;text-align:center;max-width:580px;width:100%}
+.waitlist-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,224,158,0.06);border:1px solid rgba(0,224,158,0.12);border-radius:100px;padding:.375rem 1rem .375rem .625rem;margin-bottom:2rem}
+.waitlist-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--aquamarine);animation:badgePulse 2s ease-in-out infinite}
+.waitlist-badge span{font-size:.75rem;font-weight:600;color:var(--aquamarine);letter-spacing:.3px}
+@keyframes badgePulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
+.waitlist-content h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;letter-spacing:-2px;line-height:1.02;margin-bottom:1.25rem}
+.waitlist-content h1 .accent{color:var(--aquamarine)}
+.waitlist-content .sub{font-size:clamp(1rem,2vw,1.1875rem);color:var(--white-40);max-width:440px;margin:0 auto 3rem;line-height:1.6}
+.waitlist-form{display:flex;gap:.625rem;max-width:460px;margin:0 auto 1.5rem}
+@media(max-width:500px){.waitlist-form{flex-direction:column}}
+.waitlist-input{flex:1;background:var(--surface);border:1px solid var(--white-06);border-radius:12px;padding:1rem 1.25rem;font-family:var(--font);font-size:.9375rem;color:var(--white);outline:none;transition:border-color .3s}
+.waitlist-input::placeholder{color:#555}
+.waitlist-input:focus{border-color:rgba(0,224,158,0.3)}
+.waitlist-btn{background:var(--aquamarine);color:var(--black);font-family:var(--font);font-size:.9375rem;font-weight:600;padding:1rem 1.75rem;border-radius:12px;border:none;cursor:pointer;transition:all .25s;white-space:nowrap}
+.waitlist-btn:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(0,224,158,0.2)}
+.waitlist-btn:active{transform:translateY(0)}
+.waitlist-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.waitlist-note{font-size:.75rem;color:var(--gray);max-width:380px;margin:0 auto}
+.waitlist-success{display:none;text-align:center}
+.waitlist-success.show{display:block}
+.waitlist-success .success-icon{width:64px;height:64px;border-radius:50%;background:rgba(0,224,158,0.1);border:2px solid var(--aquamarine);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
+.waitlist-success h2{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-1px;margin-bottom:.75rem}
+.waitlist-success p{color:var(--gray);font-size:1rem;max-width:380px;margin:0 auto}
+.form-wrapper{transition:opacity .3s}
+.form-wrapper.hidden{opacity:0;pointer-events:none;position:absolute}
+.proof{margin-top:4rem;padding-top:3rem;border-top:1px solid var(--white-06);max-width:480px;margin-left:auto;margin-right:auto}
+.proof-items{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;text-align:center}
+@media(max-width:400px){.proof-items{grid-template-columns:1fr;gap:1rem}}
+.proof-item .proof-number{font-size:1.5rem;font-weight:700;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.proof-item .proof-label{font-size:.6875rem;color:var(--gray);margin-top:.125rem}
+.features-strip{position:relative;z-index:1;max-width:680px;margin:0 auto;padding-top:4rem}
+.features-strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:600px){.features-strip-grid{grid-template-columns:1fr}}
+.fs-card{background:var(--surface);border:1px solid var(--white-06);border-radius:14px;padding:1.5rem 1.25rem;text-align:center;position:relative;overflow:hidden}
+.fs-card::before{content:'';position:absolute;top:0;left:1rem;right:1rem;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,158,0.1),transparent)}
+.fs-icon{width:36px;height:36px;border-radius:10px;background:rgba(0,224,158,0.06);border:1px solid rgba(0,224,158,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto .875rem;color:var(--aquamarine)}
+.fs-card h4{font-size:.875rem;font-weight:600;margin-bottom:.25rem}
+.fs-card p{font-size:.75rem;color:var(--gray)}
+footer{border-top:1px solid var(--white-06);padding:2rem 0;position:relative;z-index:1}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-left{display:flex;align-items:center;gap:1.5rem}
+.footer-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--white)}
+.footer-logo .logo-text{font-size:1rem;font-weight:700}
+.footer-tagline{color:var(--gray);font-size:.8125rem}
+.footer-copy{color:var(--gray);font-size:.6875rem}
+@media(max-width:768px){.footer-inner{flex-direction:column;text-align:center}.footer-left{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="nav-inner">
+<a href="index.html" class="nav-logo"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="index.html" class="nav-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-es="Volver al inicio" data-en="Back to home">Volver al inicio</span></a>
+</div></nav>
+<section class="waitlist-page">
+<div class="bg-grid"></div><div class="bg-glow-1"></div><div class="bg-glow-2"></div><div class="bg-glow-3"></div>
+<div class="waitlist-content">
+<div class="form-wrapper" id="formWrapper">
+<div class="waitlist-badge reveal"><div class="waitlist-badge-dot"></div><span data-es="Pre-lanzamiento" data-en="Pre-launch">Pre-lanzamiento</span></div>
+<h1 class="reveal d1">Invierte sin <span class="accent">fronteras.</span></h1>
+<p class="sub reveal d2" data-es="Acceso limitado a los primeros 500. Obtén 30% de descuento en comisiones por 6 meses." data-en="Access limited to the first 500. Get 30% off fees for 6 months.">Acceso limitado a los primeros 500. Obtén 30% de descuento en comisiones por 6 meses.</p>
+<div class="waitlist-form reveal d3"><input type="email" class="waitlist-input" id="emailInput" placeholder="tu@email.com" required /><button class="waitlist-btn" id="submitBtn" onclick="submitWaitlist()">Unirme</button></div>
+<p class="waitlist-note reveal d4">Sin spam. Solo te avisamos cuando estemos listos.</p>
+<div class="proof reveal d5"><div class="proof-items">
+<div class="proof-item"><div class="proof-number"><span id="waitlistCount">0</span>/500</div><div class="proof-label">Lugares ocupados</div></div>
+<div class="proof-item"><div class="proof-number">+200</div><div class="proof-label">Activos disponibles</div></div>
+<div class="proof-item"><div class="proof-number">$1</div><div class="proof-label">Mínimo para invertir</div></div>
+</div></div></div>
+<div class="waitlist-success" id="successState"><div class="success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h2>¡Estás dentro!</h2><p>Te avisaremos cuando Pasi esté listo. Mientras tanto, puedes seguirnos en redes para estar al día.</p></div>
+<div class="features-strip reveal d4"><div class="features-strip-grid">
+<div class="fs-card"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h4>Self-custody</h4><p>Tus llaves, tu control</p></div>
+<div class="fs-card"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h4>Desde $1 USDT</h4><p>Acciones fraccionadas</p></div>
+<div class="fs-card"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><h4>-30% fees</h4><p>Por 6 meses para early adopters</p></div>
+</div></div></div></section>
+<footer><div class="footer-inner"><div class="footer-left"><a href="index.html" class="footer-logo"><svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline">Invierte sin fronteras.</span></div><p class="footer-copy">© 2026 Pasi. Todos los derechos reservados.</p></div></footer>
+<script>
+const GOOGLE_SHEET_URL='https://script.google.com/macros/s/AKfycbxE5Yln6YW2LO3lCTjvZUMoeN4JJiPVCSDjPi1vkQ3R9Ak_vH4CJriJkHKD17lfqgQWiA/exec';
+async function submitWaitlist(){const email=document.getElementById('emailInput').value.trim();const btn=document.getElementById('submitBtn');if(!email||!email.includes('@')||!email.includes('.')){document.getElementById('emailInput').style.borderColor='#EF4444';setTimeout(()=>document.getElementById('emailInput').style.borderColor='',2000);return}btn.disabled=true;btn.textContent='...';try{await fetch(GOOGLE_SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})});document.getElementById('formWrapper').classList.add('hidden');setTimeout(()=>{document.getElementById('successState').classList.add('show')},300)}catch(err){document.getElementById('formWrapper').classList.add('hidden');setTimeout(()=>{document.getElementById('successState').classList.add('show')},300)}}
+document.getElementById('emailInput').addEventListener('keydown',function(e){if(e.key==='Enter')submitWaitlist()});
+function animateCounter(el,target,duration){const start=performance.now();function update(now){const p=Math.min((now-start)/duration,1);const eased=1-Math.pow(1-p,3);el.textContent=Math.round(eased*target);if(p<1)requestAnimationFrame(update)}requestAnimationFrame(update)}
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');const counter=entry.target.querySelector('#waitlistCount');if(counter&&!counter.dataset.animated){counter.dataset.animated='true';animateCounter(counter,47,1500)}}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+let currentLang='es';
+</script>
+</body>
+</html>

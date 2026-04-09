@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Centro de Ayuda — Pasi</title>
+<meta name="description" content="Respuestas a tus preguntas sobre Pasi. Cuenta, depósitos, inversiones, seguridad y más." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#888888;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
+html{scroll-behavior:smooth;background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{background:var(--black);overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
+.container-narrow{max-width:800px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
+.label{font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.section-line{height:1px;background:linear-gradient(90deg,transparent,var(--white-10),transparent)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 0;transition:background .3s,backdrop-filter .3s}
+nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--white-06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--white)}
+.nav-logo .logo-text{font-size:1.25rem;font-weight:700;letter-spacing:-.5px}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{color:var(--gray);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.lang-toggle{background:var(--white-06);border:1px solid var(--white-10);color:var(--gray);font-family:var(--font);font-size:.75rem;font-weight:600;letter-spacing:.5px;padding:.375rem .75rem;border-radius:6px;cursor:pointer;transition:all .2s;text-transform:uppercase}
+.nav-cta{background:var(--white)!important;color:var(--black)!important;padding:.5rem 1.25rem;border-radius:8px;font-weight:600!important;font-size:.875rem!important}
+.mobile-menu-btn{display:none;background:none;border:none;color:var(--white);cursor:pointer;padding:.5rem}
+@media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(5,5,5,0.97);backdrop-filter:blur(20px);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--white-06)}}
+.hero{padding:10rem 0 4rem;text-align:center;position:relative}
+.hero::after{content:'';position:absolute;width:500px;height:500px;left:50%;top:40%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.05) 0%,transparent 60%);pointer-events:none}
+.hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;margin-bottom:1.5rem;position:relative;z-index:1}
+.hero .sub{font-size:clamp(1rem,2vw,1.125rem);color:var(--white-40);max-width:440px;margin:0 auto 2.5rem;position:relative;z-index:1}
+.search-wrap{max-width:520px;margin:0 auto;position:relative;z-index:1}
+.search-input{width:100%;background:var(--surface);border:1px solid var(--white-06);border-radius:14px;padding:1rem 1.25rem 1rem 3rem;font-family:var(--font);font-size:1rem;color:var(--white);outline:none;transition:border-color .3s}
+.search-input::placeholder{color:#555}
+.search-input:focus{border-color:rgba(0,224,158,0.3)}
+.search-icon{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--gray);pointer-events:none}
+.search-count{text-align:center;margin-top:1rem;font-size:.8125rem;color:var(--gray);min-height:1.25rem}
+.categories{padding:4rem 0}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:768px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:450px){.cat-grid{grid-template-columns:1fr}}
+.cat-card{background:var(--surface);border:1px solid var(--white-06);border-radius:14px;padding:1.5rem;cursor:pointer;transition:border-color .3s,transform .3s;position:relative;overflow:hidden}
+.cat-card:hover,.cat-card.active{border-color:rgba(0,224,158,0.15);transform:translateY(-2px)}
+.cat-card.active{background:linear-gradient(165deg,rgba(0,224,158,0.04) 0%,var(--surface) 100%)}
+.cat-icon{width:36px;height:36px;border-radius:10px;background:rgba(0,224,158,0.06);border:1px solid rgba(0,224,158,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:.875rem;color:var(--aquamarine)}
+.cat-card h3{font-size:.9375rem;font-weight:600;margin-bottom:.25rem}
+.cat-card p{font-size:.75rem;color:var(--gray)}
+.cat-count{position:absolute;top:1.25rem;right:1.25rem;font-size:.625rem;font-weight:600;color:var(--gray);background:var(--white-06);padding:.125rem .5rem;border-radius:100px}
+.faq-sections{padding:2rem 0 8rem}
+.faq-group{margin-bottom:3rem}
+.faq-group-title{font-size:1.125rem;font-weight:700;letter-spacing:-.3px;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid var(--white-06);display:flex;align-items:center;gap:.75rem}
+.faq-group-title .cat-dot{width:8px;height:8px;border-radius:50%;background:var(--aquamarine)}
+.faq-item{border-bottom:1px solid var(--white-06);overflow:hidden}
+.faq-item.hidden{display:none}
+.faq-question{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0;cursor:pointer;font-size:.9375rem;font-weight:600;background:none;border:none;color:var(--white);font-family:var(--font);width:100%;text-align:left;gap:1rem;transition:color .2s}
+.faq-question:hover{color:var(--aquamarine)}
+.faq-chevron{width:18px;height:18px;transition:transform .3s;flex-shrink:0;color:var(--gray)}
+.faq-item.open .faq-chevron{transform:rotate(180deg);color:var(--aquamarine)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.faq-item.open .faq-answer{max-height:300px;padding-bottom:1.25rem}
+.faq-answer p{color:var(--gray);font-size:.875rem;line-height:1.7;max-width:680px}
+.contact{padding:6rem 0;text-align:center}
+.contact-inner{max-width:500px;margin:0 auto;padding:3rem;border:1px solid var(--white-06);border-radius:20px;background:linear-gradient(165deg,rgba(17,17,17,0.5) 0%,rgba(5,5,5,0.8) 100%);position:relative;overflow:hidden}
+.contact-inner::before{content:'';position:absolute;top:0;left:2rem;right:2rem;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,158,0.15),transparent)}
+.contact h3{font-size:1.5rem;font-weight:700;letter-spacing:-.5px;margin-bottom:.5rem}
+.contact p{color:var(--gray);font-size:.9375rem;margin-bottom:1.5rem}
+.contact-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--white);color:var(--black);font-family:var(--font);font-size:.9375rem;font-weight:600;padding:.875rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
+.contact-btn:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(255,255,255,0.1)}
+footer{border-top:1px solid var(--white-06);padding:3rem 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-left{display:flex;align-items:center;gap:2rem}
+.footer-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--white)}
+.footer-logo .logo-text{font-size:1rem;font-weight:700}
+.footer-tagline{color:var(--gray);font-size:.875rem}
+.footer-copy{color:var(--gray);font-size:.75rem}
+@media(max-width:768px){.footer-inner{flex-direction:column;text-align:center}.footer-left{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="container"><div class="nav-inner">
+<a href="index.html" class="nav-logo"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="como-funciona.html">Cómo Funciona</a></li>
+<li><a href="seguridad.html">Seguridad</a></li>
+<li><a href="ayuda.html" class="active">Ayuda</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li><button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button></li>
+<li><a href="waitlist.html" class="nav-cta">Únete al waitlist</a></li>
+</ul>
+<button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+</div></div></nav>
+
+<section class="hero">
+<div class="container">
+<h1 class="reveal">¿Cómo te podemos ayudar?</h1>
+<p class="sub reveal d1">Busca tu pregunta o explora por categoría.</p>
+<div class="search-wrap reveal d2">
+<svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input type="text" class="search-input" id="searchInput" placeholder="Buscar pregunta..." oninput="filterFAQ()" />
+</div>
+<p class="search-count" id="searchCount"></p>
+</div>
+</section>
+
+<section class="categories"><div class="container"><div class="cat-grid">
+<div class="cat-card reveal" onclick="filterByCategory('cuenta')" data-cat="cuenta"><div class="cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><h3>Cuenta y registro</h3><p>Cómo crear tu cuenta, KYC, requisitos</p><span class="cat-count" data-cat-count="cuenta"></span></div>
+<div class="cat-card reveal d1" onclick="filterByCategory('depositos')" data-cat="depositos"><div class="cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div><h3>Depósitos y retiros</h3><p>USDT, bolívares, tiempos, comisiones</p><span class="cat-count" data-cat-count="depositos"></span></div>
+<div class="cat-card reveal d2" onclick="filterByCategory('inversiones')" data-cat="inversiones"><div class="cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Inversiones</h3><p>Acciones, ETFs, órdenes, mercados</p><span class="cat-count" data-cat-count="inversiones"></span></div>
+<div class="cat-card reveal" onclick="filterByCategory('seguridad')" data-cat="seguridad"><div class="cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Seguridad</h3><p>Self-custody, protección, 2FA</p><span class="cat-count" data-cat-count="seguridad"></span></div>
+<div class="cat-card reveal d1" onclick="filterByCategory('legal')" data-cat="legal"><div class="cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Legal y regulatorio</h3><p>Legalidad, impuestos, jurisdicción</p><span class="cat-count" data-cat-count="legal"></span></div>
+<div class="cat-card reveal d2" onclick="filterByCategory('general')" data-cat="general"><div class="cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></div><h3>General</h3><p>Qué es Pasi, lanzamiento, soporte</p><span class="cat-count" data-cat-count="general"></span></div>
+</div></div></section>
+<div class="section-line"></div>
+
+<section class="faq-sections"><div class="container-narrow">
+<div class="faq-group" data-group="cuenta"><div class="faq-group-title"><div class="cat-dot"></div><span>Cuenta y registro</span></div>
+<div class="faq-item" data-cat="cuenta" data-q="necesito cuenta banco eeuu"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Necesito una cuenta en un banco de EE.UU.?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>No. Solo necesitas USDT y tu teléfono. Pasi fue diseñado para que no dependas de un banco en EE.UU..</p></div></div>
+<div class="faq-item" data-cat="cuenta" data-q="documentos registro cedula"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Qué documentos necesito para registrarme?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Tu cédula de identidad venezolana, un número de teléfono y un correo electrónico. El proceso de verificación toma minutos.</p></div></div>
+<div class="faq-item" data-cat="cuenta" data-q="cuanto tarda verificacion kyc"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Cuánto tarda la verificación KYC?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Normalmente unos pocos minutos. En casos excepcionales puede tomar hasta 24 horas si se requiere revisión manual.</p></div></div>
+<div class="faq-item" data-cat="cuenta" data-q="edad minima menor"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Hay una edad mínima para usar Pasi?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Sí, debes ser mayor de 18 años para crear una cuenta en Pasi.</p></div></div>
+</div>
+
+<div class="faq-group" data-group="depositos"><div class="faq-group-title"><div class="cat-dot"></div><span>Depósitos y retiros</span></div>
+<div class="faq-item" data-cat="depositos" data-q="como depositar usdt"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Cómo deposito USDT en mi cuenta?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Envías USDT desde tu wallet externa a la dirección que Pasi te asigna. También podrás depositar directamente desde bolívares cuando activemos esa función.</p></div></div>
+<div class="faq-item" data-cat="depositos" data-q="cuanto tarda deposito"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Cuánto tarda en llegar mi depósito?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Los depósitos en USDT se confirman en minutos, dependiendo de la congestión de la red.</p></div></div>
+<div class="faq-item" data-cat="depositos" data-q="retirar dinero bolivares"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Cómo retiro mi dinero?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Vendes tus acciones, recibes USDT en tu cuenta de Pasi, y lo retiras a tu wallet externa. Desde ahí, puedes convertirlo a bolívares como lo harías normalmente.</p></div></div>
+<div class="faq-item" data-cat="depositos" data-q="comisiones fees costos"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Qué comisiones cobra Pasi?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Comisiones transparentes y competitivas. Sin costos ocultos. Los detalles exactos de la estructura de comisiones se publicarán antes del lanzamiento.</p></div></div>
+<div class="faq-item" data-cat="depositos" data-q="minimo deposito"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Hay un mínimo de depósito?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>El mínimo de inversión es $1 USDT. El mínimo de depósito puede variar según la red utilizada.</p></div></div>
+</div>
+
+<div class="faq-group" data-group="inversiones"><div class="faq-group-title"><div class="cat-dot"></div><span>Inversiones</span></div>
+<div class="faq-item" data-cat="inversiones" data-q="acciones reales tokenizadas"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Estoy comprando acciones reales?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Sí. Son acciones tokenizadas respaldadas 1:1 por activos reales. No son derivados, simulaciones ni CFDs.</p></div></div>
+<div class="faq-item" data-cat="inversiones" data-q="minimo invertir dolar"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Cuál es el mínimo para invertir?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>$1 USDT. Gracias a las acciones fraccionadas, no necesitas comprar una acción entera.</p></div></div>
+<div class="faq-item" data-cat="inversiones" data-q="que puedo comprar acciones etf"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Qué acciones y ETFs están disponibles?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Más de 200 activos al lanzamiento, incluyendo Apple, Tesla, Nvidia, Meta, Chevron y los ETFs más populares (VOO, QQQ).</p></div></div>
+<div class="faq-item" data-cat="inversiones" data-q="dividendos"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Recibo dividendos?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Sí, si la acción o ETF que posees paga dividendos, los recibirás proporcionalmente a tu participación.</p></div></div>
+<div class="faq-item" data-cat="inversiones" data-q="perder dinero riesgo"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Puedo perder dinero?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Sí. Toda inversión conlleva riesgo. El valor de tus acciones puede subir o bajar. Pasi te da acceso y educación, pero no garantiza rendimientos.</p></div></div>
+</div>
+
+<div class="faq-group" data-group="seguridad"><div class="faq-group-title"><div class="cat-dot"></div><span>Seguridad</span></div>
+<div class="faq-item" data-cat="seguridad" data-q="self custody llaves"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Qué significa self-custody?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Significa que tú controlas tus llaves privadas. Nadie — ni siquiera Pasi — puede mover tus fondos sin tu autorización.</p></div></div>
+<div class="faq-item" data-cat="seguridad" data-q="pasi desaparece quiebra"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Qué pasa con mi dinero si Pasi desaparece?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Tus activos están bajo self-custody y en fondos segregados. Tu dinero nunca se mezcla con el nuestro. Si Pasi deja de existir, tu dinero sigue siendo tuyo.</p></div></div>
+<div class="faq-item" data-cat="seguridad" data-q="2fa autenticacion biometria"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Qué medidas de seguridad tiene Pasi?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Encriptación AES-256, autenticación de dos factores (2FA), verificación biométrica, y monitoreo continuo de actividad sospechosa.</p></div></div>
+</div>
+
+<div class="faq-group" data-group="legal"><div class="faq-group-title"><div class="cat-dot"></div><span>Legal y regulatorio</span></div>
+<div class="faq-item" data-cat="legal" data-q="legal venezuela invertir"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Es legal usar Pasi desde Venezuela?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Pasi opera desde Panamá bajo un marco regulatorio diseñado para este tipo de servicio. No existe prohibición venezolana para que un ciudadano invierta a través de una plataforma extranjera.</p></div></div>
+<div class="faq-item" data-cat="legal" data-q="impuestos pagar seniat"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Tengo que pagar impuestos por mis ganancias?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Las obligaciones fiscales dependen de la legislación de tu país de residencia. Te recomendamos consultar con un asesor tributario.</p></div></div>
+<div class="faq-item" data-cat="legal" data-q="donde registrada panama"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Dónde está registrada Pasi?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Pasi está incorporada en Panamá, con operaciones diseñadas para cumplir con los marcos regulatorios aplicables.</p></div></div>
+</div>
+
+<div class="faq-group" data-group="general"><div class="faq-group-title"><div class="cat-dot"></div><span>General</span></div>
+<div class="faq-item" data-cat="general" data-q="que es pasi plataforma"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Qué es Pasi?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Pasi es una plataforma de inversión que te permite comprar acciones y ETFs del mercado de EE.UU. usando USDT, desde tu teléfono, sin necesidad de una cuenta en un banco en EE.UU.. Construida por venezolanos, para venezolanos.</p></div></div>
+<div class="faq-item" data-cat="general" data-q="cuando lanza fecha"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Cuándo se lanza Pasi?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Estamos en desarrollo activo del MVP. Únete al waitlist para ser de los primeros en acceder cuando lancemos.</p></div></div>
+<div class="faq-item" data-cat="general" data-q="solo venezuela otros paises"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Solo funciona para venezolanos?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Empezamos con Venezuela porque es donde vivimos el problema. Pero la visión es expandirnos a toda Latinoamérica.</p></div></div>
+<div class="faq-item" data-cat="general" data-q="contactar soporte ayuda"><button class="faq-question" onclick="toggleFaq(this)"><span>¿Cómo contacto al equipo de soporte?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Puedes escribirnos a hola@pasi.lat o a través de nuestras redes sociales. Respondemos en menos de 24 horas.</p></div></div>
+</div>
+</div></section>
+
+<section class="contact"><div class="container-narrow"><div class="contact-inner reveal">
+<h3>¿No encontraste tu respuesta?</h3>
+<p>Escríbenos y te respondemos en menos de 24 horas.</p>
+<a href="mailto:hola@pasi.lat" class="contact-btn">Contactar soporte</a>
+</div></div></section>
+
+<footer><div class="container"><div class="footer-inner">
+<div class="footer-left"><a href="index.html" class="footer-logo"><svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline">Invierte sin fronteras.</span></div>
+<p class="footer-copy">© 2026 Pasi. Todos los derechos reservados.</p>
+</div></div></footer>
+
+<script>
+let currentLang='es';
+function toggleLang(){currentLang=currentLang==='es'?'en':'es';document.getElementById('langToggle').textContent=currentLang==='es'?'EN':'ES';document.documentElement.lang=currentLang;document.querySelectorAll('[data-es][data-en]').forEach(el=>{const t=el.getAttribute('data-'+currentLang);if(el.tagName==='INPUT')el.placeholder=t;else el.textContent=t})}
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+function toggleMobileMenu(){document.getElementById('navLinks').classList.toggle('open')}
+document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+function toggleFaq(btn){const item=btn.parentElement;item.classList.toggle('open')}
+document.querySelectorAll('[data-cat-count]').forEach(el=>{const cat=el.getAttribute('data-cat-count');const count=document.querySelectorAll('.faq-item[data-cat="'+cat+'"]').length;el.textContent=count});
+let activeCategory=null;
+function filterFAQ(){const query=document.getElementById('searchInput').value.toLowerCase().trim();const items=document.querySelectorAll('.faq-item');let visible=0;if(query){activeCategory=null;document.querySelectorAll('.cat-card').forEach(c=>c.classList.remove('active'))}items.forEach(item=>{const q=item.getAttribute('data-q')||'';const text=item.querySelector('.faq-question span').textContent.toLowerCase();const answer=item.querySelector('.faq-answer p').textContent.toLowerCase();const cat=item.getAttribute('data-cat');let show=true;if(query){show=(q+' '+text+' '+answer).includes(query)}if(activeCategory&&!query){show=cat===activeCategory}item.classList.toggle('hidden',!show);if(show)visible++});document.querySelectorAll('.faq-group').forEach(g=>{const hasVisible=g.querySelector('.faq-item:not(.hidden)');g.style.display=hasVisible?'':'none'});const countEl=document.getElementById('searchCount');if(query){countEl.textContent=visible+' resultado'+(visible!==1?'s':'')+' para "'+query+'"'}else{countEl.textContent=''}}
+function filterByCategory(cat){document.getElementById('searchInput').value='';if(activeCategory===cat){activeCategory=null;document.querySelectorAll('.cat-card').forEach(c=>c.classList.remove('active'));document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('hidden'));document.querySelectorAll('.faq-group').forEach(g=>g.style.display='');document.getElementById('searchCount').textContent='';return}activeCategory=cat;document.querySelectorAll('.cat-card').forEach(c=>{c.classList.toggle('active',c.getAttribute('data-cat')===cat)});document.querySelectorAll('.faq-item').forEach(i=>{i.classList.toggle('hidden',i.getAttribute('data-cat')!==cat)});document.querySelectorAll('.faq-group').forEach(g=>{const hasVisible=g.querySelector('.faq-item:not(.hidden)');g.style.display=hasVisible?'':'none'});document.getElementById('searchCount').textContent='';document.querySelector('.faq-sections').scrollIntoView({behavior:'smooth',block:'start'})}
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
