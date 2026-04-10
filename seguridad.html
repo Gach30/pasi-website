@@ -140,13 +140,13 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <nav id="nav"><div class="container"><div class="nav-inner">
 <a href="index.html" class="nav-logo"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
 <ul class="nav-links" id="navLinks">
-<li><a href="index.html">Inicio</a></li>
-<li><a href="como-funciona.html">Cómo Funciona</a></li>
-<li><a href="seguridad.html" class="active">Seguridad</a></li>
-<li><a href="ayuda.html">Ayuda</a></li>
-<li><a href="nosotros.html">Sobre Pasi</a></li>
+<li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+<li><a href="como-funciona.html" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
+<li><a href="seguridad.html" class="active" data-es="Seguridad" data-en="Security">Seguridad</a></li>
+<li><a href="ayuda.html" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="nosotros.html" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button></li>
-<li><a href="waitlist.html" class="nav-cta">Únete al waitlist</a></li>
+<li><a href="waitlist.html" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
 </ul>
 <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
 </div></div></nav>
@@ -157,75 +157,75 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <button class="mobile-drawer-close" onclick="closeMobileMenu()" aria-label="Close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="como-funciona.html">Cómo Funciona</a></li>
-<li><a href="seguridad.html" class="active">Seguridad</a></li>
-<li><a href="ayuda.html">Ayuda</a></li>
-<li><a href="nosotros.html">Sobre Pasi</a></li>
-<li><a href="waitlist.html" class="nav-cta">Únete al waitlist</a></li>
+<li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+<li><a href="como-funciona.html" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
+<li><a href="seguridad.html" class="active" data-es="Seguridad" data-en="Security">Seguridad</a></li>
+<li><a href="ayuda.html" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="nosotros.html" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
+<li><a href="waitlist.html" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
 </ul>
 </div>
 
 <section class="page-hero">
 <div class="container">
-<p class="label reveal">Seguridad</p>
-<h1 class="reveal d1">Tus llaves. Tus activos.<br/>Tu control.</h1>
-<p class="sub reveal d2">Construido sobre transparencia. Cada movimiento, verificable.</p>
+<p class="label reveal" data-es="Seguridad" data-en="Security">Seguridad</p>
+<h1 class="reveal d1" data-es="Tus llaves. Tus activos. Tu control." data-en="Your keys. Your assets. Your control.">Tus llaves. Tus activos.<br/>Tu control.</h1>
+<p class="sub reveal d2" data-es="Construido sobre transparencia. Cada movimiento, verificable." data-en="Built on transparency. Every transaction, verifiable.">Construido sobre transparencia. Cada movimiento, verificable.</p>
 </div>
 </section>
 <div class="section-line"></div>
 
 <section class="pillars"><div class="container">
-<div class="pillar"><div class="pillar-text reveal"><p class="pillar-num">Pilar 01</p><h3>Self-custody nativo</h3><p>Tú controlas tus llaves privadas. Nadie puede mover tus fondos sin tu autorización — ni siquiera Pasi.</p></div><div class="pillar-visual reveal d2"><div class="lock-visual"><div class="lock-orbits"></div><div class="lock-box"><div class="lock-keyhole"></div></div></div></div></div>
-<div class="pillar"><div class="pillar-text reveal"><p class="pillar-num">Pilar 02</p><h3>Fondos segregados</h3><p>Tu dinero nunca se mezcla con el nuestro. Si Pasi desaparece, tu dinero sigue siendo tuyo.</p></div><div class="pillar-visual reveal d2"><div class="shield-container"><div class="shield-ring"></div><div class="shield-ring"></div><div class="shield-ring"></div><div class="shield-main"><svg width="120" height="140" viewBox="0 0 120 140" fill="none"><path d="M60 5L10 30v40c0 35 22 60 50 65 28-5 50-30 50-65V30L60 5z" fill="none" stroke="var(--aquamarine)" stroke-width="2" opacity=".6"/><path d="M60 20L22 40v30c0 28 17 48 38 52 21-4 38-24 38-52V40L60 20z" fill="rgba(0,224,158,0.03)" stroke="var(--aquamarine)" stroke-width="1" opacity=".3"/><path d="M48 70l8 8 16-16" stroke="var(--aquamarine)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div></div>
-<div class="pillar"><div class="pillar-text reveal"><p class="pillar-num">Pilar 03</p><h3>Todo verificable</h3><p>Cada movimiento de tu dinero es rastreable y verificable.</p></div><div class="pillar-visual reveal d2"><div class="chain-visual"><div class="chain-block"><div class="block-label">Depósito</div><div class="block-value">$100.00 USDT</div></div><div class="chain-link"></div><div class="chain-block active"><div class="block-label">Compra</div><div class="block-value">0.44 xAAPL</div></div><div class="chain-link"></div><div class="chain-block"><div class="block-label">Portafolio</div><div class="block-value">$102.30</div></div><div class="chain-link"></div><div class="chain-block"><div class="block-label">Retiro</div><div class="block-value">→ Tu wallet</div></div></div></div></div>
+<div class="pillar"><div class="pillar-text reveal"><p class="pillar-num" data-es="Pilar 01" data-en="Pillar 01">Pilar 01</p><h3 data-es="Self-custody nativo" data-en="Native Self-Custody">Self-custody nativo</h3><p data-es="Tú controlas tus llaves privadas. Nadie puede mover tus fondos sin tu autorización — ni siquiera Pasi." data-en="You control your private keys. Nobody can move your funds without your authorization — not even Pasi.">Tú controlas tus llaves privadas. Nadie puede mover tus fondos sin tu autorización — ni siquiera Pasi.</p></div><div class="pillar-visual reveal d2"><div class="lock-visual"><div class="lock-orbits"></div><div class="lock-box"><div class="lock-keyhole"></div></div></div></div></div>
+<div class="pillar"><div class="pillar-text reveal"><p class="pillar-num" data-es="Pilar 02" data-en="Pillar 02">Pilar 02</p><h3 data-es="Fondos segregados" data-en="Segregated Funds">Fondos segregados</h3><p data-es="Tu dinero nunca se mezcla con el nuestro. Si Pasi desaparece, tu dinero sigue siendo tuyo." data-en="Your money is never mixed with ours. If Pasi disappears, your money is still yours.">Tu dinero nunca se mezcla con el nuestro. Si Pasi desaparece, tu dinero sigue siendo tuyo.</p></div><div class="pillar-visual reveal d2"><div class="shield-container"><div class="shield-ring"></div><div class="shield-ring"></div><div class="shield-ring"></div><div class="shield-main"><svg width="120" height="140" viewBox="0 0 120 140" fill="none"><path d="M60 5L10 30v40c0 35 22 60 50 65 28-5 50-30 50-65V30L60 5z" fill="none" stroke="var(--aquamarine)" stroke-width="2" opacity=".6"/><path d="M60 20L22 40v30c0 28 17 48 38 52 21-4 38-24 38-52V40L60 20z" fill="rgba(0,224,158,0.03)" stroke="var(--aquamarine)" stroke-width="1" opacity=".3"/><path d="M48 70l8 8 16-16" stroke="var(--aquamarine)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div></div>
+<div class="pillar"><div class="pillar-text reveal"><p class="pillar-num" data-es="Pilar 03" data-en="Pillar 03">Pilar 03</p><h3 data-es="Todo verificable" data-en="Fully Verifiable">Todo verificable</h3><p data-es="Cada movimiento de tu dinero es rastreable y verificable." data-en="Every movement of your money is traceable and verifiable.">Cada movimiento de tu dinero es rastreable y verificable.</p></div><div class="pillar-visual reveal d2"><div class="chain-visual"><div class="chain-block"><div class="block-label" data-es="Depósito" data-en="Deposit">Depósito</div><div class="block-value">$100.00 USDT</div></div><div class="chain-link"></div><div class="chain-block active"><div class="block-label" data-es="Compra" data-en="Purchase">Compra</div><div class="block-value">0.44 xAAPL</div></div><div class="chain-link"></div><div class="chain-block"><div class="block-label" data-es="Portafolio" data-en="Portfolio">Portafolio</div><div class="block-value">$102.30</div></div><div class="chain-link"></div><div class="chain-block"><div class="block-label" data-es="Retiro" data-en="Withdrawal">Retiro</div><div class="block-value" data-es="→ Tu wallet" data-en="→ Your wallet">→ Tu wallet</div></div></div></div></div>
 </div></section>
 <div class="section-line"></div>
 
 <section class="comparison"><div class="container">
-<p class="label reveal" style="color:var(--gray);margin-bottom:1rem">La diferencia</p>
-<h2 class="reveal d1">Plataformas tradicionales vs. Pasi.</h2>
+<p class="label reveal" style="color:var(--gray);margin-bottom:1rem" data-es="La diferencia" data-en="The Difference">La diferencia</p>
+<h2 class="reveal d1" data-es="Plataformas tradicionales vs. Pasi." data-en="Traditional Platforms vs. Pasi.">Plataformas tradicionales vs. Pasi.</h2>
 <div class="compare-table reveal d2">
-<div class="compare-col old"><div class="compare-header"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg><span>Plataformas custodiales</span></div>
-<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Ellos controlan tus llaves</span></div>
-<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Pueden congelar tus fondos</span></div>
-<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Fondos mezclados con la empresa</span></div>
-<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Si quiebran, pierdes todo</span></div></div>
+<div class="compare-col old"><div class="compare-header"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg><span data-es="Plataformas custodiales" data-en="Custodial Platforms">Plataformas custodiales</span></div>
+<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-es="Ellos controlan tus llaves" data-en="They control your keys">Ellos controlan tus llaves</span></div>
+<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-es="Pueden congelar tus fondos" data-en="They can freeze your funds">Pueden congelar tus fondos</span></div>
+<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-es="Fondos mezclados con la empresa" data-en="Funds mixed with the company">Fondos mezclados con la empresa</span></div>
+<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-es="Si quiebran, pierdes todo" data-en="If they go bankrupt, you lose everything">Si quiebran, pierdes todo</span></div></div>
 <div class="compare-col pasi"><div class="compare-header"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg><span>Pasi</span></div>
-<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Tú controlas tus llaves</span></div>
-<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Nadie congela tu dinero</span></div>
-<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Fondos 100% segregados</span></div>
-<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span>Si Pasi desaparece, tu dinero no</span></div></div>
+<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-es="Tú controlas tus llaves" data-en="You control your keys">Tú controlas tus llaves</span></div>
+<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-es="Nadie congela tu dinero" data-en="Nobody freezes your money">Nadie congela tu dinero</span></div>
+<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-es="Fondos 100% segregados" data-en="100% segregated funds">Fondos 100% segregados</span></div>
+<div class="compare-item"><svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-es="Si Pasi desaparece, tu dinero no" data-en="If Pasi disappears, your money doesn't">Si Pasi desaparece, tu dinero no</span></div></div>
 </div></div></section>
 <div class="section-line"></div>
 
 <section class="certs"><div class="container">
-<p class="label reveal" style="color:var(--gray);margin-bottom:1rem">Infraestructura</p>
-<h2 class="reveal d1">Construido sobre los mejores estándares.</h2>
-<p class="sub reveal d2">No reinventamos la rueda. Nos montamos sobre infraestructura probada.</p>
+<p class="label reveal" style="color:var(--gray);margin-bottom:1rem" data-es="Infraestructura" data-en="Infrastructure">Infraestructura</p>
+<h2 class="reveal d1" data-es="Construido sobre los mejores estándares." data-en="Built on the highest standards.">Construido sobre los mejores estándares.</h2>
+<p class="sub reveal d2" data-es="No reinventamos la rueda. Nos montamos sobre infraestructura probada." data-en="We didn't reinvent the wheel. We built on proven infrastructure.">No reinventamos la rueda. Nos montamos sobre infraestructura probada.</p>
 <div class="certs-grid">
-<div class="cert-card reveal d1"><div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Encriptación AES-256</h4><p>El mismo estándar de los bancos más grandes del mundo.</p></div>
-<div class="cert-card reveal d2"><div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h4>2FA + Biometría</h4><p>Autenticación de dos factores y verificación biométrica.</p></div>
-<div class="cert-card reveal d3"><div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="1.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h4>KYC/AML regulado</h4><p>Cumplimiento total con normativas de prevención de lavado.</p></div>
+<div class="cert-card reveal d1"><div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4 data-es="Encriptación AES-256" data-en="AES-256 Encryption">Encriptación AES-256</h4><p data-es="El mismo estándar de los bancos más grandes del mundo." data-en="The same standard used by the world's largest banks.">El mismo estándar de los bancos más grandes del mundo.</p></div>
+<div class="cert-card reveal d2"><div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h4 data-es="2FA + Biometría" data-en="2FA + Biometrics">2FA + Biometría</h4><p data-es="Autenticación de dos factores y verificación biométrica." data-en="Two-factor authentication and biometric verification.">Autenticación de dos factores y verificación biométrica.</p></div>
+<div class="cert-card reveal d3"><div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="1.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h4 data-es="KYC/AML regulado" data-en="Regulated KYC/AML">KYC/AML regulado</h4><p data-es="Cumplimiento total con normativas de prevención de lavado." data-en="Full compliance with anti-money laundering regulations.">Cumplimiento total con normativas de prevención de lavado.</p></div>
 </div></div></section>
 <div class="section-line"></div>
 
 <section class="promise"><div class="container-narrow"><div class="promise-inner reveal">
-<h3>Nuestra promesa es simple:</h3>
-<p>Construimos Pasi porque vivimos la exclusión. Y porque vimos qué pasa cuando las plataformas no protegen a sus usuarios. Por eso cada decisión de arquitectura empieza con la misma pregunta: <span class="accent">¿cómo protegemos mejor el dinero de quien confía en nosotros?</span></p>
+<h3 data-es="Nuestra promesa es simple:" data-en="Our promise is simple:">Nuestra promesa es simple:</h3>
+<p data-es="Construimos Pasi porque vivimos la exclusión. Y porque vimos qué pasa cuando las plataformas no protegen a sus usuarios. Por eso cada decisión de arquitectura empieza con la misma pregunta:" data-en="We built Pasi because we lived the exclusion. And because we saw what happens when platforms don't protect their users. That's why every architecture decision starts with the same question:">Construimos Pasi porque vivimos la exclusión. Y porque vimos qué pasa cuando las plataformas no protegen a sus usuarios. Por eso cada decisión de arquitectura empieza con la misma pregunta: <span class="accent" data-es="¿cómo protegemos mejor el dinero de quien confía en nosotros?" data-en="how do we best protect the money of those who trust us?">¿cómo protegemos mejor el dinero de quien confía en nosotros?</span></p>
 </div></div></section>
 <div class="section-line"></div>
 
 <section class="final-cta" id="waitlist"><div class="container-narrow">
-<h2 class="reveal">Invierte tranquilo.</h2>
-<p class="sub reveal d1">Únete al waitlist. Tu dinero, tu control.</p>
-<a href="waitlist.html" class="btn-primary reveal d2">Únete al waitlist</a>
+<h2 class="reveal" data-es="Invierte tranquilo." data-en="Invest with peace of mind.">Invierte tranquilo.</h2>
+<p class="sub reveal d1" data-es="Únete al waitlist. Tu dinero, tu control." data-en="Join the waitlist. Your money, your control.">Únete al waitlist. Tu dinero, tu control.</p>
+<a href="waitlist.html" class="btn-primary reveal d2" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a>
 </div></section>
 
 <footer><div class="container"><div class="footer-inner">
-<div class="footer-left"><a href="index.html" class="footer-logo"><svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline">Invierte sin fronteras.</span></div>
-<ul class="footer-links"><li><a href="como-funciona.html">Producto</a></li><li><a href="seguridad.html">Seguridad</a></li><li><a href="ayuda.html">Ayuda</a></li><li><a href="nosotros.html">Sobre Pasi</a></li></ul>
-<p class="footer-copy">© 2026 Pasi. Todos los derechos reservados.</p>
+<div class="footer-left"><a href="index.html" class="footer-logo"><svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
+<ul class="footer-links"><li><a href="como-funciona.html" data-es="Producto" data-en="Product">Producto</a></li><li><a href="seguridad.html" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="ayuda.html" data-es="Ayuda" data-en="Help">Ayuda</a></li><li><a href="nosotros.html" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li></ul>
+<p class="footer-copy" data-es="© 2026 Pasi. Todos los derechos reservados." data-en="© 2026 Pasi. All rights reserved.">© 2026 Pasi. Todos los derechos reservados.</p>
 </div></div></footer>
 
 <script>
