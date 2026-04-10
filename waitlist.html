@@ -112,7 +112,9 @@ function animateCounter(el,target,duration){const start=performance.now();functi
 const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');const counter=entry.target.querySelector('#waitlistCount');if(counter&&!counter.dataset.animated){counter.dataset.animated='true';animateCounter(counter,47,1500)}}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-let currentLang='es';
+let currentLang=localStorage.getItem('pasi-lang')||'es';
+function applyLang(){document.documentElement.lang=currentLang;document.querySelectorAll('[data-es][data-en]').forEach(el=>{const t=el.getAttribute('data-'+currentLang);if(el.tagName==='INPUT')el.placeholder=t;else el.textContent=t})}
+if(currentLang!=='es')applyLang();
 </script>
 </body>
 </html>
