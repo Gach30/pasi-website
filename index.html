@@ -97,14 +97,15 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .mock-stocks-label{font-size:.6875rem;color:var(--gray);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.75rem}
 .mock-stock-row{display:flex;align-items:center;justify-content:space-between;padding:.625rem 0;border-top:1px solid var(--white-06)}
 .mock-stock-info{display:flex;align-items:center;gap:.625rem}
-.mock-stock-icon{width:28px;height:28px;border-radius:8px;background:var(--white-06);display:flex;align-items:center;justify-content:center;font-size:.625rem;font-weight:700}
+.mock-stock-icon{width:28px;height:28px;border-radius:8px;background:var(--white-06);display:flex;align-items:center;justify-content:center;font-size:.625rem;font-weight:700;flex-shrink:0}
+.mock-stock-icon svg{width:16px;height:16px}
 .mock-stock-name{font-size:.8125rem;font-weight:600}
 .mock-stock-full{font-size:.625rem;color:var(--gray)}
 .mock-stock-price{text-align:right}
 .mock-stock-value{font-size:.8125rem;font-weight:600;font-variant-numeric:tabular-nums}
 .mock-stock-pct{font-size:.625rem;font-weight:500}
 .mock-stock-pct.up{color:var(--gain)}
-.mock-bottom-nav{display:flex;justify-content:space-around;padding:.75rem 0;border-top:1px solid var(--white-06)}
+.mock-bottom-nav{display:flex;justify-content:space-around;padding:.5rem 0;border-top:1px solid var(--white-06);flex-shrink:0}
 .mock-nav-item{display:flex;flex-direction:column;align-items:center;gap:.25rem;font-size:.5625rem;color:var(--gray)}
 .mock-nav-item.active{color:var(--white)}
 .how-it-works{padding:8rem 0;position:relative}
@@ -303,8 +304,8 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <p class="mock-change">↑ $124.30 (4.56%) <span style="color:var(--gray)">30d</span></p>
 <div class="mock-chart"><svg viewBox="0 0 240 70" preserveAspectRatio="none"><defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#22C55E" stop-opacity=".15"/><stop offset="100%" stop-color="#22C55E" stop-opacity="0"/></linearGradient></defs><path d="M0,55 C20,50 40,48 60,42 C80,36 100,38 120,30 C140,22 160,25 180,18 C200,12 220,15 240,8" stroke="#22C55E" stroke-width="1.5" fill="none"/><path d="M0,55 C20,50 40,48 60,42 C80,36 100,38 120,30 C140,22 160,25 180,18 C200,12 220,15 240,8 L240,70 L0,70 Z" fill="url(#cg)"/></svg></div>
 <p class="mock-stocks-label" data-es="Tus acciones" data-en="Your stocks">Tus acciones</p>
-<div class="mock-stock-row"><div class="mock-stock-info"><div class="mock-stock-icon">AAPL</div><div><p class="mock-stock-name">Apple</p><p class="mock-stock-full">AAPL</p></div></div><div class="mock-stock-price"><p class="mock-stock-value">$892.40</p><p class="mock-stock-pct up">+2.14%</p></div></div>
-<div class="mock-stock-row"><div class="mock-stock-info"><div class="mock-stock-icon">TSLA</div><div><p class="mock-stock-name">Tesla</p><p class="mock-stock-full">TSLA</p></div></div><div class="mock-stock-price"><p class="mock-stock-value">$1,204.15</p><p class="mock-stock-pct up">+5.32%</p></div></div>
+<div class="mock-stock-row"><div class="mock-stock-info"><div class="mock-stock-icon"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></div><div><p class="mock-stock-name">Apple</p><p class="mock-stock-full">AAPL</p></div></div><div class="mock-stock-price"><p class="mock-stock-value">$892.40</p><p class="mock-stock-pct up">+2.14%</p></div></div>
+<div class="mock-stock-row"><div class="mock-stock-info"><div class="mock-stock-icon"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 5.362l2.475-3.026s4.245.09 8.471 2.054c-1.082 1.636-3.231 2.438-3.231 2.438-.146-1.439-1.154-1.79-4.354-1.79L12 24 8.619 5.034c-3.18 0-4.188.354-4.335 1.792 0 0-2.146-.795-3.229-2.43C5.28 2.431 9.525 2.34 9.525 2.34L12 5.362zM12 1.46c3.415-.03 7.326.528 11.328 2.28.535-.968.672-1.395.672-1.395C19.625.612 15.528.015 12 0 8.472.015 4.375.61 0 2.349c0 0 .195.525.672 1.396C4.674 1.989 8.585 1.435 12 1.46z"/></svg></div><div><p class="mock-stock-name">Tesla</p><p class="mock-stock-full">TSLA</p></div></div><div class="mock-stock-price"><p class="mock-stock-value">$1,204.15</p><p class="mock-stock-pct up">+5.32%</p></div></div>
 <div class="mock-stock-row"><div class="mock-stock-info"><div class="mock-stock-icon" style="font-size:.5rem">VOO</div><div><p class="mock-stock-name">S&amp;P 500</p><p class="mock-stock-full">VOO ETF</p></div></div><div class="mock-stock-price"><p class="mock-stock-value">$751.08</p><p class="mock-stock-pct up">+1.87%</p></div></div>
 </div>
 <div class="mock-bottom-nav">
