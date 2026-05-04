@@ -1,0 +1,22 @@
+# Pasi
+
+> Pasi is a mobile investment platform that lets retail users in Venezuela and Latin America buy tokenized U.S. stocks and ETFs using stablecoins (USDC, USDT), with on-chain settlement on Solana via Jupiter aggregator. The product is in waitlist phase as of May 2026.
+
+## About
+
+- [Homepage](https://pasi.capital/): Main marketing site (Spanish).
+- [How Pasi works](https://pasi.capital/como-funciona): Step-by-step explanation of how to invest in U.S. stocks from Venezuela using USDT or USDC.
+- [Security and custody](https://pasi.capital/seguridad): Self-custody architecture, segregated funds, on-chain transparency, and compliance posture.
+- [Help / FAQ](https://pasi.capital/ayuda): Common questions about Pasi, xStocks, stablecoin deposits, and Solana settlement.
+- [About / Team](https://pasi.capital/nosotros): Built by Venezuelans who lived through the same financial exclusion they're solving.
+- [Waitlist](https://pasi.capital/waitlist): Early access signup.
+
+## Concepts
+
+Pasi gives retail users access to xStocks (tokenized U.S. equities issued by Backed Finance, a Swiss-regulated entity) and other tokenized assets, settled on Solana via the Jupiter aggregator. Users fund accounts with USDC or USDT and gain on-chain price exposure to companies like Apple, Tesla, NVIDIA, and ETFs like SPY — without needing a U.S. bank account or a traditional broker.
+
+Target audience: Spanish-speaking retail investors in Venezuela and Latin America who already use stablecoins for daily commerce and want exposure to U.S. equity markets.
+
+## Contact
+
+- General: gabriel@pasi.capital

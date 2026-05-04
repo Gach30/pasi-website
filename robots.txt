@@ -1,0 +1,87 @@
+# pasi.capital — robots.txt
+# Strategy: Allow everything. Pasi optimizes for visibility across
+# search engines and AI assistants.
+
+User-agent: *
+Allow: /
+
+# ---- Search engines ----
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ---- OpenAI ----
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# ---- Anthropic ----
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# ---- Perplexity ----
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ---- Google AI training token ----
+User-agent: Google-Extended
+Allow: /
+
+# ---- Apple AI training ----
+User-agent: Applebot-Extended
+Allow: /
+
+# ---- Other AI crawlers ----
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+Sitemap: https://pasi.capital/sitemap.xml
