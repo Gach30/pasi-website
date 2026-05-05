@@ -2,7 +2,7 @@
 from playwright.sync_api import sync_playwright
 from pathlib import Path
 
-OUT = Path(__file__).parent
+OUT = Path(__file__).parent.parent / "og"
 
 CARDS = [
     {
@@ -107,7 +107,7 @@ def build_html(card):
 def main(only_slug=None):
     with sync_playwright() as p:
         browser = p.chromium.launch()
-        ctx = browser.new_context(viewport={"width": 1200, "height": 630}, device_scale_factor=2)
+        ctx = browser.new_context(viewport={"width": 1200, "height": 630}, device_scale_factor=1)
         page = ctx.new_page()
         for card in CARDS:
             if only_slug and card["slug"] != only_slug:
