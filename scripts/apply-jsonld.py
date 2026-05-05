@@ -95,12 +95,64 @@ def insert_or_replace(html, payload):
     return html.replace("</head>", payload + "\n</head>", 1)
 
 
+def extract_faq_items(html):
+    """Extract Q/A pairs from ayuda.html. Uses Spanish text (data-es attrs).
+    Each FAQ item has structure:
+      <button class="faq-question"><span data-es="Q?" ...>Q?</span>...</button>
+      <div class="faq-answer">
+        <p data-es="A1.">A1.</p>
+        [<p data-es="A2.">A2.</p>...]
+      </div></div>
+    """
+    items = []
+    pattern = re.compile(
+        r'<button class="faq-question"[^>]*>'
+        r'<span data-es="([^"]+)"[^>]*>[^<]*</span>'
+        r'.*?'
+        r'<div class="faq-answer">(.*?)</div></div>',
+        re.DOTALL,
+    )
+    for q_match in pattern.finditer(html):
+        question = q_match.group(1).strip()
+        answer_body = q_match.group(2)
+        # Concatenate every <p data-es="..."> paragraph in the answer
+        paras = re.findall(r'<p data-es="([^"]+)"', answer_body)
+        if not paras:
+            continue
+        answer = " ".join(p.strip() for p in paras)
+        items.append({"q": question, "a": answer})
+    return items
+
+
+def faq_page_for(items):
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": it["q"],
+                "acceptedAnswer": {"@type": "Answer", "text": it["a"]},
+            }
+            for it in items
+        ],
+    }
+
+
 def main():
     pages = [
         ("index.html", [ORGANIZATION, WEBSITE]),
     ]
     for fname, (label, path) in BREADCRUMBS.items():
-        pages.append((fname, [ORGANIZATION, breadcrumb_for(label, path)]))
+        blocks = [ORGANIZATION, breadcrumb_for(label, path)]
+        # ayuda gets a FAQPage schema built from its actual Q&A content
+        if fname == "ayuda.html":
+            ayuda_html = (ROOT / fname).read_text(encoding="utf-8")
+            faq_items = extract_faq_items(ayuda_html)
+            print(f"  extracted {len(faq_items)} FAQ items from {fname}")
+            if faq_items:
+                blocks.append(faq_page_for(faq_items))
+        pages.append((fname, blocks))
 
     for fname, blocks in pages:
         path = ROOT / fname
