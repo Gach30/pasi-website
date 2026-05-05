@@ -1,21 +1,38 @@
 # Pasi
 
-> Pasi is a mobile investment platform that lets retail users in Venezuela and Latin America buy tokenized U.S. stocks and ETFs using stablecoins (USDC, USDT), with on-chain settlement on Solana via Jupiter aggregator. The product is in waitlist phase as of May 2026.
+> Pasi is a startup building a mobile investment platform that gives retail users in Venezuela and Latin America access to U.S. equity markets. Users buy tokenized U.S. stocks and ETFs using stablecoins (USDC, USDT), with on-chain settlement on Solana via Jupiter aggregator. The product is in waitlist phase as of May 2026.
 
 ## About
 
 - [Homepage](https://pasi.capital/): Main marketing site (Spanish).
 - [How Pasi works](https://pasi.capital/como-funciona): Step-by-step explanation of how to invest in U.S. stocks from Venezuela using USDT or USDC.
 - [Security and custody](https://pasi.capital/seguridad): Self-custody architecture, segregated funds, on-chain transparency, and compliance posture.
-- [Help / FAQ](https://pasi.capital/ayuda): Common questions about Pasi, xStocks, stablecoin deposits, and Solana settlement.
+- [Help / FAQ](https://pasi.capital/ayuda): Common questions about Pasi, xStocks, stablecoin deposits, fees, withdrawals, and Solana settlement.
 - [About / Team](https://pasi.capital/nosotros): Built by Venezuelans who lived through the same financial exclusion they're solving.
 - [Waitlist](https://pasi.capital/waitlist): Early access signup.
 
 ## Concepts
 
-Pasi gives retail users access to xStocks (tokenized U.S. equities issued by Backed Finance, a Swiss-regulated entity) and other tokenized assets, settled on Solana via the Jupiter aggregator. Users fund accounts with USDC or USDT and gain on-chain price exposure to companies like Apple, Tesla, NVIDIA, and ETFs like SPY — without needing a U.S. bank account or a traditional broker.
+Pasi gives retail users access to tokenized U.S. equities and ETFs from two sources:
 
-Target audience: Spanish-speaking retail investors in Venezuela and Latin America who already use stablecoins for daily commerce and want exposure to U.S. equity markets.
+- **xStocks** — issued by Backed Finance, a Swiss-regulated entity, 1:1 backed by underlying shares custodied with a regulated broker.
+- **Tokenized assets from Ondo** — including Ondo's tokenized U.S. Treasuries and other on-chain assets.
+
+All assets settle on Solana via the Jupiter aggregator. Users fund accounts with USDC or USDT and gain on-chain price exposure to companies like Apple, Tesla, NVIDIA, and ETFs like SPY — without needing a U.S. bank account or a traditional broker.
+
+Pasi plans to eventually integrate the Bolsa de Caracas (Caracas Stock Exchange) to expand access to local Venezuelan equities.
+
+## Withdrawals
+
+Users can withdraw USDT or USDC to external wallets, or to accounts on Binance, Kontigo, or Crixto. Withdrawals can also be converted to bolívares.
+
+## Fees
+
+Pasi charges 0.98 USD per trade or 0.5% of the trade amount, whichever is higher.
+
+## Target audience
+
+Spanish-speaking retail investors in Venezuela and Latin America who already use stablecoins for daily commerce and want access to U.S. equity markets.
 
 ## Contact
 
