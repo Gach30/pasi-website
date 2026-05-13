@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
 :root{--black:#050505;--gray:#888;--white:#fff;--white-10:rgba(255,255,255,0.1);--white-40:rgba(255,255,255,0.4);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
 html,body{background:var(--black);color:var(--white);font-family:var(--font);-webkit-font-smoothing:antialiased}
 body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
-.bg-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(0,224,158,0.12) 0%,rgba(0,224,158,0.04) 30%,transparent 70%);pointer-events:none;z-index:0}
+
 .wrap{position:relative;z-index:1;text-align:center;max-width:520px}
 .code{font-size:clamp(5rem,15vw,8rem);font-weight:700;letter-spacing:-4px;line-height:1;color:var(--aquamarine);font-variant-numeric:tabular-nums;margin-bottom:1rem}
 h1{font-size:clamp(1.5rem,3vw,2rem);font-weight:600;letter-spacing:-.5px;line-height:1.2;margin-bottom:1rem}
@@ -27,7 +27,7 @@ p{color:var(--gray);font-size:1rem;line-height:1.6;margin-bottom:2.5rem}
 </style>
 </head>
 <body>
-<div class="bg-glow"></div>
+
 <div class="wrap">
   <a href="/" class="logo-link"><svg aria-hidden="true" width="24" height="28" viewBox="0 0 100 115" fill="none"><rect x="6" y="14" width="37" height="90" rx="11" fill="#00E09E"/><rect x="47" y="7" width="49" height="52" rx="13" fill="#00E09E"/></svg>Pasi</a>
   <div class="code">404</div>
@@ -35,5 +35,6 @@ p{color:var(--gray);font-size:1rem;line-height:1.6;margin-bottom:2.5rem}
   <p>El enlace que seguiste puede estar roto, o la página fue movida. Vuelve al inicio para seguir explorando Pasi.</p>
   <a href="/" class="btn">Volver al inicio</a>
 </div>
+<script src="/particles.js"></script>
 </body>
 </html>

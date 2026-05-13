@@ -84,8 +84,8 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--white);color:var(--black);font-family:var(--font);font-size:1rem;font-weight:600;padding:.875rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(255,255,255,0.1)}
 .page-hero{padding:12rem 0 8rem;position:relative;overflow:hidden}
-.page-hero .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;opacity:.2;mask-image:radial-gradient(ellipse 70% 50% at 50% 40%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 70% 50% at 50% 40%,black 20%,transparent 70%)}
-.page-hero .hero-glow{position:absolute;width:600px;height:600px;left:60%;top:30%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.06) 0%,transparent 60%);pointer-events:none}
+
+
 .page-hero .label{color:var(--aquamarine);margin-bottom:1.5rem;position:relative;z-index:1}
 .page-hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;letter-spacing:-2px;line-height:1.02;max-width:750px;margin-bottom:1.5rem;position:relative;z-index:1}
 .page-hero .sub{font-size:clamp(1.125rem,2vw,1.25rem);color:var(--white-40);max-width:540px;position:relative;z-index:1;line-height:1.6}
@@ -245,7 +245,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 </div>
 
 <main id="main">
-<section class="page-hero"><div class="hero-grid"></div><div class="hero-glow"></div>
+<section class="page-hero">
 <div class="container">
 <p class="label reveal" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</p>
 <h1 class="reveal d1" data-es="El acceso que tu dinero necesita." data-en="The access your money needs.">El acceso que tu dinero necesita.</h1>
@@ -327,5 +327,6 @@ let autoPlay=setInterval(nextSlide,10000);
 document.querySelector('.quote-carousel').addEventListener('mouseenter',()=>clearInterval(autoPlay));
 document.querySelector('.quote-carousel').addEventListener('mouseleave',()=>{autoPlay=setInterval(nextSlide,10000)});
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>

@@ -87,8 +87,8 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .btn-secondary:hover{border-color:var(--white-40);background:var(--white-06)}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;padding-top:5rem}
 .hero-bg{position:absolute;inset:0;overflow:hidden;z-index:0}
-.hero-bg::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;opacity:.3;mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,black 20%,transparent 70%)}
-.hero-bg::after{content:'';position:absolute;width:700px;height:700px;right:5%;top:20%;background:radial-gradient(circle,rgba(0,224,158,0.15) 0%,rgba(0,224,158,0.06) 30%,transparent 70%);pointer-events:none}
+
+
 .hero-content{position:relative;z-index:2}
 .hero-tagline{color:var(--aquamarine);margin-bottom:1.5rem}
 .hero .display{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:800px;margin-bottom:1.5rem}
@@ -560,5 +560,6 @@ const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(ent
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>

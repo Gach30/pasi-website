@@ -61,10 +61,10 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .nav-back{color:var(--gray);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s;display:flex;align-items:center;gap:.375rem}
 .nav-back:hover{color:var(--white)}
 .waitlist-page{flex:1;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 4rem;position:relative}
-.waitlist-page .bg-grid{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;opacity:.15;mask-image:radial-gradient(ellipse 60% 50% at 50% 45%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 45%,black 20%,transparent 70%)}
-.waitlist-page .bg-glow-1{position:absolute;width:600px;height:600px;left:50%;top:35%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.07) 0%,transparent 55%);pointer-events:none}
-.waitlist-page .bg-glow-2{position:absolute;width:400px;height:400px;left:25%;top:65%;background:radial-gradient(circle,rgba(0,224,158,0.03) 0%,transparent 60%);pointer-events:none}
-.waitlist-page .bg-glow-3{position:absolute;width:350px;height:350px;right:15%;top:25%;background:radial-gradient(circle,rgba(0,224,158,0.03) 0%,transparent 60%);pointer-events:none}
+
+
+
+
 .waitlist-content{position:relative;z-index:1;text-align:center;max-width:580px;width:100%}
 .waitlist-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,224,158,0.06);border:1px solid rgba(0,224,158,0.12);border-radius:100px;padding:.375rem 1rem .375rem .625rem;margin-bottom:2rem}
 .waitlist-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--aquamarine);animation:badgePulse 2s ease-in-out infinite}
@@ -169,7 +169,7 @@ footer{border-top:1px solid var(--white-06);padding:2rem 0;position:relative;z-i
 </div></nav>
 <main id="main">
 <section class="waitlist-page">
-<div class="bg-grid"></div><div class="bg-glow-1"></div><div class="bg-glow-2"></div><div class="bg-glow-3"></div>
+
 <div class="waitlist-content">
 <div class="form-wrapper" id="formWrapper">
 <div class="waitlist-badge reveal"><div class="waitlist-badge-dot"></div><span data-es="Pre-lanzamiento" data-en="Pre-launch">Pre-lanzamiento</span></div>
@@ -202,5 +202,6 @@ let currentLang=localStorage.getItem('pasi-lang')||'es';
 function applyLang(){document.documentElement.lang=currentLang;document.querySelectorAll('[data-es][data-en]').forEach(el=>{const t=el.getAttribute('data-'+currentLang);if(el.tagName==='INPUT')el.placeholder=t;else el.textContent=t})}
 if(currentLang!=='es')applyLang();
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>

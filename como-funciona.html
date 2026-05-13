@@ -84,7 +84,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--white);color:var(--black);font-family:var(--font);font-size:1rem;font-weight:600;padding:.875rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(255,255,255,0.1)}
 .page-hero{padding:10rem 0 6rem;text-align:center;position:relative}
-.page-hero::after{content:'';position:absolute;width:400px;height:400px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.04) 0%,transparent 70%);pointer-events:none}
+
 .page-hero .label{color:var(--aquamarine);margin-bottom:1.5rem}
 .page-hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;margin-bottom:1.5rem;position:relative;z-index:1}
 .page-hero .sub{font-size:clamp(1.125rem,2vw,1.25rem);color:var(--white-40);max-width:520px;margin:0 auto;position:relative;z-index:1}
@@ -348,5 +348,6 @@ function toggleFaq(btn){const item=btn.parentElement;item.classList.toggle('open
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>
