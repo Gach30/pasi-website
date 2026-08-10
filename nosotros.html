@@ -106,18 +106,18 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .team{padding:8rem 0;position:relative}
 .team h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;line-height:1.1;margin-bottom:.5rem}
 .team .sub{color:var(--gray);margin-bottom:4rem;font-size:.9375rem}
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:500px){.team-grid{grid-template-columns:1fr}}
-.team-card{background:linear-gradient(165deg,#151515 0%,var(--surface) 100%);border:1px solid var(--white-06);border-radius:18px;padding:2rem 1.75rem;position:relative;overflow:hidden;transition:border-color .4s,transform .4s}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:900px}
+@media(max-width:700px){.team-grid{grid-template-columns:1fr;max-width:480px}}
+.team-card{background:linear-gradient(165deg,#151515 0%,var(--surface) 100%);border:1px solid var(--white-06);border-radius:20px;padding:2.5rem 2.25rem;position:relative;overflow:hidden;transition:border-color .4s,transform .4s}
 .team-card:hover{border-color:rgba(0,224,158,0.15);transform:translateY(-3px)}
 .team-card::before{content:'';position:absolute;top:0;left:1.5rem;right:1.5rem;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,158,0.15),transparent)}
-.team-avatar{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,rgba(0,224,158,0.12),rgba(0,224,158,0.03));border:1px solid rgba(0,224,158,0.15);display:flex;align-items:center;justify-content:center;font-size:1.125rem;font-weight:700;color:var(--aquamarine);margin-bottom:1.25rem}
-.team-card.founder .team-avatar{width:68px;height:68px;border-radius:18px;font-size:1.25rem;background:linear-gradient(135deg,rgba(0,224,158,0.18),rgba(0,224,158,0.04));border-color:rgba(0,224,158,0.25)}
+.team-avatar{width:140px;height:140px;border-radius:24px;background:linear-gradient(135deg,rgba(0,224,158,0.12),rgba(0,224,158,0.03));border:1px solid rgba(0,224,158,0.15);overflow:hidden;margin-bottom:1.5rem}
+.team-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.team-card.founder .team-avatar{border-color:rgba(0,224,158,0.25)}
 .team-card.founder{border-color:rgba(0,224,158,0.1)}
-.team-name{font-size:1.0625rem;font-weight:700;margin-bottom:.25rem}
-.team-role{font-size:.75rem;color:var(--aquamarine);font-weight:600;letter-spacing:.3px;margin-bottom:.875rem;text-transform:uppercase}
-.team-bio{font-size:.8125rem;color:var(--gray);line-height:1.65}
+.team-name{font-size:1.3125rem;font-weight:700;margin-bottom:.25rem}
+.team-role{font-size:.8125rem;color:var(--aquamarine);font-weight:600;letter-spacing:.3px;margin-bottom:1rem;text-transform:uppercase}
+.team-bio{font-size:.9375rem;color:var(--gray);line-height:1.7}
 .values{padding:4rem 0 0}
 .values-header{padding:0 0 4rem}
 .values-header h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;line-height:1.1}
@@ -268,13 +268,10 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <section class="team"><div class="container">
 <p class="label reveal" style="color:var(--gray);margin-bottom:1rem" data-es="El equipo" data-en="The Team">El equipo</p>
 <h2 class="reveal d1" data-es="Quiénes construyen Pasi." data-en="Who's building Pasi.">Quiénes construyen Pasi.</h2>
-<p class="sub reveal d2" data-es="5 venezolanos. Una misión." data-en="5 Venezuelans. One mission.">5 venezolanos. Una misión.</p>
+<p class="sub reveal d2" data-es="2 venezolanos. Una misión." data-en="2 Venezuelans. One mission.">2 venezolanos. Una misión.</p>
 <div class="team-grid">
-<div class="team-card founder reveal d1"><div class="team-avatar">GB</div><p class="team-name">Gabriel Bagdadi</p><p class="team-role" data-es="Fundador &amp; CEO" data-en="Founder &amp; CEO">Fundador &amp; CEO</p><p class="team-bio" data-es="Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi." data-en="Financial analysis, venture capital, and the Venezuelan economy. The frustration of not being able to invest in the S&amp;P 500 from Venezuela is what led him to build Pasi.">Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi.</p></div>
-<div class="team-card reveal d2"><div class="team-avatar">JG</div><p class="team-name">Jhonatan González</p><p class="team-role">CTO</p><p class="team-bio" data-es="CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo." data-en="CEO and founder of Dynamic Devs. The technical backbone of Pasi. Key in product architecture and team recruitment.">CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo.</p></div>
-<div class="team-card reveal d3"><div class="team-avatar">H</div><p class="team-name">Harold</p><p class="team-role" data-es="Asesor Blockchain" data-en="Blockchain Advisor">Asesor Blockchain</p><p class="team-bio" data-es="Infraestructura cripto y estrategia de integración con Solana." data-en="Crypto infrastructure and Solana integration strategy.">Infraestructura cripto y estrategia de integración con Solana.</p></div>
-<div class="team-card reveal d4"><div class="team-avatar">C</div><p class="team-name">César</p><p class="team-role" data-es="Desarrollador" data-en="Developer">Desarrollador</p><p class="team-bio" data-es="Amplia experiencia desarrollando en fintechs latinoamericanas. Talento y dedicación desde el día uno." data-en="Extensive experience building for Latin American fintechs. Talent and dedication from day one.">Amplia experiencia desarrollando en fintechs latinoamericanas. Talento y dedicación desde el día uno.</p></div>
-<div class="team-card reveal d5"><div class="team-avatar">S</div><p class="team-name">Silvestre</p><p class="team-role" data-es="Desarrollador" data-en="Developer">Desarrollador</p><p class="team-bio" data-es="Experiencia en fintechs de la región. Cada pantalla y cada flujo pensado desde la realidad venezolana." data-en="Experience in regional fintechs. Every screen and every flow designed from the Venezuelan reality.">Experiencia en fintechs de la región. Cada pantalla y cada flujo pensado desde la realidad venezolana.</p></div>
+<div class="team-card founder reveal d1"><div class="team-avatar"><img src="/team-gabriel.jpg" alt="Gabriel Bagdadi" width="140" height="140" loading="lazy"></div><p class="team-name">Gabriel Bagdadi</p><p class="team-role" data-es="Fundador &amp; CEO" data-en="Founder &amp; CEO">Fundador &amp; CEO</p><p class="team-bio" data-es="Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi." data-en="Financial analysis, venture capital, and the Venezuelan economy. The frustration of not being able to invest in the S&amp;P 500 from Venezuela is what led him to build Pasi.">Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi.</p></div>
+<div class="team-card reveal d2"><div class="team-avatar"><img src="/team-jhonatan.jpg" alt="Jhonatan González" width="140" height="140" loading="lazy"></div><p class="team-name">Jhonatan González</p><p class="team-role">CTO</p><p class="team-bio" data-es="CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo." data-en="CEO and founder of Dynamic Devs. The technical backbone of Pasi. Key in product architecture and team recruitment.">CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo.</p></div>
 </div></div></section>
 <div class="section-line"></div>
 
