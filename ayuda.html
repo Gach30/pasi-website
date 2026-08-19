@@ -56,7 +56,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#888888;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
+:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#B8B8B8;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
 html{scroll-behavior:smooth;background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body{background:var(--black);overflow-x:hidden}
 .container{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
@@ -92,9 +92,9 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .mobile-drawer .nav-cta{display:inline-block;background:var(--white);color:var(--black);padding:.75rem 1.5rem;border-radius:8px;font-weight:600;font-size:.875rem;margin-top:1rem;text-align:center}
 @media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}}
 .hero{padding:10rem 0 4rem;text-align:center;position:relative}
-.hero::after{content:'';position:absolute;width:500px;height:500px;left:50%;top:40%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.05) 0%,transparent 60%);pointer-events:none}
+
 .hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;margin-bottom:1.5rem;position:relative;z-index:1}
-.hero .sub{font-size:clamp(1rem,2vw,1.125rem);color:var(--white-40);max-width:440px;margin:0 auto 2.5rem;position:relative;z-index:1}
+.hero .sub{font-size:clamp(1rem,2vw,1.125rem);color:#B8B8B8;max-width:440px;margin:0 auto 2.5rem;position:relative;z-index:1}
 .search-wrap{max-width:520px;margin:0 auto;position:relative;z-index:1}
 .search-input{width:100%;background:var(--surface);border:1px solid var(--white-06);border-radius:14px;padding:1rem 1.25rem 1rem 3rem;font-family:var(--font);font-size:1rem;color:var(--white);outline:none;transition:border-color .3s}
 .search-input::placeholder{color:#555}
@@ -278,7 +278,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
       "name": "¿Cuál es el mínimo para invertir?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "$1 USDT. Gracias a las acciones fraccionadas, no necesitas comprar una acción entera."
+        "text": "$5 USDT. Gracias a las acciones fraccionadas, no necesitas comprar una acción entera."
       }
     },
     {
@@ -326,7 +326,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
       "name": "¿Es legal usar Pasi desde Venezuela?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pasi opera desde Panamá bajo un marco regulatorio diseñado para este tipo de servicio. No existe prohibición venezolana para que un ciudadano invierta a través de una plataforma extranjera."
+        "text": "Pasi opera desde Wyoming, EE.UU., bajo un marco regulatorio diseñado para este tipo de servicio. No existe prohibición venezolana para que un ciudadano invierta a través de una plataforma extranjera."
       }
     },
     {
@@ -342,7 +342,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
       "name": "¿Dónde está registrada Pasi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pasi está incorporada en Panamá, con operaciones diseñadas para cumplir con los marcos regulatorios aplicables."
+        "text": "Pasi está incorporada en Wyoming, EE.UU., con operaciones diseñadas para cumplir con los marcos regulatorios aplicables."
       }
     },
     {
@@ -381,16 +381,18 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 }
 </script>
 <!-- pasi-jsonld:end -->
+<!-- Vercel Web Analytics -->
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav id="nav" aria-label="Navegación principal"><div class="container"><div class="nav-inner">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <ul class="nav-links" id="navLinks">
 <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
 <li><a href="/como-funciona" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li>
-<li><a href="/ayuda" class="active" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="/ayuda" class="active" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
 <li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button></li>
 <li><a href="/waitlist" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
@@ -400,14 +402,14 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
 <div class="mobile-drawer" id="mobileDrawer">
 <div class="mobile-drawer-header">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <button class="mobile-drawer-close" onclick="closeMobileMenu()" aria-label="Close"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <ul>
 <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
 <li><a href="/como-funciona" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li>
-<li><a href="/ayuda" class="active" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="/ayuda" class="active" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
 <li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><a href="/waitlist" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
 </ul>
@@ -454,7 +456,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 
 <div class="faq-group" data-group="inversiones"><div class="faq-group-title"><div class="cat-dot"></div><span data-es="Inversiones" data-en="Investments">Inversiones</span></div>
 <div class="faq-item" data-cat="inversiones" data-q="acciones reales tokenizadas"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Estoy comprando acciones reales?" data-en="Am I buying real stocks?">¿Estoy comprando acciones reales?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Sí. Son acciones tokenizadas respaldadas 1:1 por activos reales. No son derivados, simulaciones ni CFDs." data-en="Yes. They are tokenized stocks backed 1:1 by real assets. They are not derivatives, simulations, or CFDs.">Sí. Son acciones tokenizadas respaldadas 1:1 por activos reales. No son derivados, simulaciones ni CFDs.</p></div></div>
-<div class="faq-item" data-cat="inversiones" data-q="minimo invertir dolar"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Cuál es el mínimo para invertir?" data-en="What is the minimum to invest?">¿Cuál es el mínimo para invertir?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="$1 USDT. Gracias a las acciones fraccionadas, no necesitas comprar una acción entera." data-en="$1 USDT. Thanks to fractional shares, you don't need to buy a whole stock.">$1 USDT. Gracias a las acciones fraccionadas, no necesitas comprar una acción entera.</p></div></div>
+<div class="faq-item" data-cat="inversiones" data-q="minimo invertir dolar"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Cuál es el mínimo para invertir?" data-en="What is the minimum to invest?">¿Cuál es el mínimo para invertir?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="$5 USDT. Gracias a las acciones fraccionadas, no necesitas comprar una acción entera." data-en="$5 USDT. Thanks to fractional shares, you don't need to buy a whole stock.">$5 USDT. Gracias a las acciones fraccionadas, no necesitas comprar una acción entera.</p></div></div>
 <div class="faq-item" data-cat="inversiones" data-q="que puedo comprar acciones etf"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Qué acciones y ETFs están disponibles?" data-en="What stocks and ETFs are available?">¿Qué acciones y ETFs están disponibles?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Más de 50 activos al lanzamiento. Entre ellos: Apple, Tesla, Nvidia, Chevron, Meta, S&amp;P500, Nasdaq100. Accede a toda la lista descargando la app." data-en="Over 50 assets at launch. Including: Apple, Tesla, Nvidia, Chevron, Meta, S&amp;P500, Nasdaq100. See the full list by downloading the app.">Más de 50 activos al lanzamiento. Entre ellos: Apple, Tesla, Nvidia, Chevron, Meta, S&amp;P500, Nasdaq100. Accede a toda la lista descargando la app.</p></div></div>
 <div class="faq-item" data-cat="inversiones" data-q="dividendos"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Recibo dividendos?" data-en="Do I receive dividends?">¿Recibo dividendos?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Sí, si la acción o ETF que posees paga dividendos, los recibirás proporcionalmente a tu participación." data-en="Yes, if the stock or ETF you own pays dividends, you'll receive them proportionally to your holdings.">Sí, si la acción o ETF que posees paga dividendos, los recibirás proporcionalmente a tu participación.</p></div></div>
 <div class="faq-item" data-cat="inversiones" data-q="perder dinero riesgo"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Puedo perder dinero?" data-en="Can I lose money?">¿Puedo perder dinero?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Sí. Toda inversión conlleva riesgo. El valor de tus acciones puede subir o bajar. Pasi te da acceso y educación, pero no garantiza rendimientos." data-en="Yes. All investing involves risk. The value of your stocks can go up or down. Pasi gives you access and education, but does not guarantee returns.">Sí. Toda inversión conlleva riesgo. El valor de tus acciones puede subir o bajar. Pasi te da acceso y educación, pero no garantiza rendimientos.</p></div></div>
@@ -466,9 +468,9 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 </div>
 
 <div class="faq-group" data-group="legal"><div class="faq-group-title"><div class="cat-dot"></div><span data-es="Legal y regulatorio" data-en="Legal & Regulatory">Legal y regulatorio</span></div>
-<div class="faq-item" data-cat="legal" data-q="legal venezuela invertir"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Es legal usar Pasi desde Venezuela?" data-en="Is it legal to use Pasi from Venezuela?">¿Es legal usar Pasi desde Venezuela?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Pasi opera desde Panamá bajo un marco regulatorio diseñado para este tipo de servicio. No existe prohibición venezolana para que un ciudadano invierta a través de una plataforma extranjera." data-en="Pasi operates from Panama under a regulatory framework designed for this type of service. There is no Venezuelan prohibition against citizens investing through a foreign platform.">Pasi opera desde Panamá bajo un marco regulatorio diseñado para este tipo de servicio. No existe prohibición venezolana para que un ciudadano invierta a través de una plataforma extranjera.</p></div></div>
+<div class="faq-item" data-cat="legal" data-q="legal venezuela invertir"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Es legal usar Pasi desde Venezuela?" data-en="Is it legal to use Pasi from Venezuela?">¿Es legal usar Pasi desde Venezuela?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Pasi opera desde Wyoming, EE.UU., bajo un marco regulatorio diseñado para este tipo de servicio. No existe prohibición venezolana para que un ciudadano invierta a través de una plataforma extranjera." data-en="Pasi operates from Wyoming, USA, under a regulatory framework designed for this type of service. There is no Venezuelan prohibition against citizens investing through a foreign platform.">Pasi opera desde Wyoming, EE.UU., bajo un marco regulatorio diseñado para este tipo de servicio. No existe prohibición venezolana para que un ciudadano invierta a través de una plataforma extranjera.</p></div></div>
 <div class="faq-item" data-cat="legal" data-q="impuestos pagar seniat"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Tengo que pagar impuestos por mis ganancias?" data-en="Do I have to pay taxes on my gains?">¿Tengo que pagar impuestos por mis ganancias?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Las obligaciones fiscales dependen de la legislación de tu país de residencia. Te recomendamos consultar con un asesor tributario." data-en="Tax obligations depend on the legislation of your country of residence. We recommend consulting with a tax advisor.">Las obligaciones fiscales dependen de la legislación de tu país de residencia. Te recomendamos consultar con un asesor tributario.</p></div></div>
-<div class="faq-item" data-cat="legal" data-q="donde registrada panama"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Dónde está registrada Pasi?" data-en="Where is Pasi registered?">¿Dónde está registrada Pasi?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Pasi está incorporada en Panamá, con operaciones diseñadas para cumplir con los marcos regulatorios aplicables." data-en="Pasi is incorporated in Panama, with operations designed to comply with applicable regulatory frameworks.">Pasi está incorporada en Panamá, con operaciones diseñadas para cumplir con los marcos regulatorios aplicables.</p></div></div>
+<div class="faq-item" data-cat="legal" data-q="donde registrada wyoming"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Dónde está registrada Pasi?" data-en="Where is Pasi registered?">¿Dónde está registrada Pasi?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Pasi está incorporada en Wyoming, EE.UU., con operaciones diseñadas para cumplir con los marcos regulatorios aplicables." data-en="Pasi is incorporated in Wyoming, USA, with operations designed to comply with applicable regulatory frameworks.">Pasi está incorporada en Wyoming, EE.UU., con operaciones diseñadas para cumplir con los marcos regulatorios aplicables.</p></div></div>
 </div>
 
 <div class="faq-group" data-group="general"><div class="faq-group-title"><div class="cat-dot"></div><span data-es="General" data-en="General">General</span></div>
@@ -487,7 +489,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 
 </main>
 <footer><div class="container"><div class="footer-inner">
-<div class="footer-left"><a href="/" class="footer-logo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
+<div class="footer-left"><a href="/" class="footer-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="20" style="display:block"><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
 <p class="footer-copy" data-es="© 2026 Pasi. Todos los derechos reservados." data-en="© 2026 Pasi. All rights reserved.">© 2026 Pasi. Todos los derechos reservados.</p>
 </div></div></footer>
 
@@ -508,5 +510,6 @@ function filterByCategory(cat){document.getElementById('searchInput').value='';i
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>

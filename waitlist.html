@@ -56,7 +56,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#888888;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
+:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#B8B8B8;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
 html{scroll-behavior:smooth;background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body{background:var(--black);overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
 .label{font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
@@ -71,10 +71,10 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .nav-back{color:var(--gray);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s;display:flex;align-items:center;gap:.375rem}
 .nav-back:hover{color:var(--white)}
 .waitlist-page{flex:1;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 4rem;position:relative}
-.waitlist-page .bg-grid{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;opacity:.15;mask-image:radial-gradient(ellipse 60% 50% at 50% 45%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 45%,black 20%,transparent 70%)}
-.waitlist-page .bg-glow-1{position:absolute;width:600px;height:600px;left:50%;top:35%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.07) 0%,transparent 55%);pointer-events:none}
-.waitlist-page .bg-glow-2{position:absolute;width:400px;height:400px;left:25%;top:65%;background:radial-gradient(circle,rgba(0,224,158,0.03) 0%,transparent 60%);pointer-events:none}
-.waitlist-page .bg-glow-3{position:absolute;width:350px;height:350px;right:15%;top:25%;background:radial-gradient(circle,rgba(0,224,158,0.03) 0%,transparent 60%);pointer-events:none}
+
+
+
+
 .waitlist-content{position:relative;z-index:1;text-align:center;max-width:580px;width:100%}
 .waitlist-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,224,158,0.06);border:1px solid rgba(0,224,158,0.12);border-radius:100px;padding:.375rem 1rem .375rem .625rem;margin-bottom:2rem}
 .waitlist-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--aquamarine);animation:badgePulse 2s ease-in-out infinite}
@@ -82,7 +82,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 @keyframes badgePulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
 .waitlist-content h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;letter-spacing:-2px;line-height:1.02;margin-bottom:1.25rem}
 .waitlist-content h1 .accent{color:var(--aquamarine)}
-.waitlist-content .sub{font-size:clamp(1rem,2vw,1.1875rem);color:var(--white-40);max-width:440px;margin:0 auto 3rem;line-height:1.6}
+.waitlist-content .sub{font-size:clamp(1rem,2vw,1.1875rem);color:#B8B8B8;max-width:440px;margin:0 auto 3rem;line-height:1.6}
 .waitlist-form{display:flex;gap:.625rem;max-width:460px;margin:0 auto 1.5rem}
 @media(max-width:500px){.waitlist-form{flex-direction:column}}
 .waitlist-input{flex:1;background:var(--surface);border:1px solid var(--white-06);border-radius:12px;padding:1rem 1.25rem;font-family:var(--font);font-size:.9375rem;color:var(--white);outline:none;transition:border-color .3s}
@@ -170,47 +170,52 @@ footer{border-top:1px solid var(--white-06);padding:2rem 0;position:relative;z-i
 }
 </script>
 <!-- pasi-jsonld:end -->
+<!-- Vercel Web Analytics -->
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav id="nav" aria-label="Navegación principal"><div class="nav-inner">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <a href="/" class="nav-back"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-es="Volver al inicio" data-en="Back to home">Volver al inicio</span></a>
 </div></nav>
 <main id="main">
 <section class="waitlist-page">
-<div class="bg-grid"></div><div class="bg-glow-1"></div><div class="bg-glow-2"></div><div class="bg-glow-3"></div>
+
 <div class="waitlist-content">
 <div class="form-wrapper" id="formWrapper">
 <div class="waitlist-badge reveal"><div class="waitlist-badge-dot"></div><span data-es="Pre-lanzamiento" data-en="Pre-launch">Pre-lanzamiento</span></div>
 <h1 class="reveal d1" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin <span class="accent">fronteras.</span></h1>
-<p class="sub reveal d2" data-es="Acceso limitado a los primeros 500. Obtén 30% de descuento en comisiones por 6 meses." data-en="Access limited to the first 500. Get 30% off fees for 6 months.">Acceso limitado a los primeros 500. Obtén 30% de descuento en comisiones por 6 meses.</p>
+<p class="sub reveal d2" data-es="Acceso limitado a los primeros 1000. Obtén 30% de descuento en comisiones por 6 meses." data-en="Access limited to the first 1000. Get 30% off fees for 6 months.">Acceso limitado a los primeros 1000. Obtén 30% de descuento en comisiones por 6 meses.</p>
 <div class="waitlist-form reveal d3"><input type="email" class="waitlist-input" id="emailInput" placeholder="tu@email.com" required /><button class="waitlist-btn" id="submitBtn" onclick="submitWaitlist()" data-es="Unirme" data-en="Join">Unirme</button></div>
 <p class="waitlist-note reveal d4" data-es="Sin spam. Solo te avisamos cuando estemos listos." data-en="No spam. We'll only notify you when we're ready.">Sin spam. Solo te avisamos cuando estemos listos.</p>
 <div class="proof reveal d5"><div class="proof-items">
-<div class="proof-item"><div class="proof-number"><span id="waitlistCount">0</span>/500</div><div class="proof-label" data-es="Lugares ocupados" data-en="Spots taken">Lugares ocupados</div></div>
+<div class="proof-item"><div class="proof-number"><span id="waitlistCount">0</span>/1000</div><div class="proof-label" data-es="Lugares ocupados" data-en="Spots taken">Lugares ocupados</div></div>
 <div class="proof-item"><div class="proof-number">+200</div><div class="proof-label" data-es="Activos disponibles" data-en="Available assets">Activos disponibles</div></div>
-<div class="proof-item"><div class="proof-number">$1</div><div class="proof-label" data-es="Mínimo para invertir" data-en="Minimum to invest">Mínimo para invertir</div></div>
+<div class="proof-item"><div class="proof-number">$5</div><div class="proof-label" data-es="Mínimo para invertir" data-en="Minimum to invest">Mínimo para invertir</div></div>
 </div></div></div>
 <div class="waitlist-success" id="successState"><div class="success-icon"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--aquamarine)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h2 data-es="¡Estás dentro!" data-en="You're in!">¡Estás dentro!</h2><p data-es="Te avisaremos cuando Pasi esté listo. Mientras tanto, puedes seguirnos en redes para estar al día." data-en="We'll let you know when Pasi is ready. In the meantime, follow us on social media to stay updated.">Te avisaremos cuando Pasi esté listo. Mientras tanto, puedes seguirnos en redes para estar al día.</p></div>
 <div class="features-strip reveal d4"><div class="features-strip-grid">
 <div class="fs-card"><div class="fs-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3 data-es="Self-custody" data-en="Self-custody">Self-custody</h3><p data-es="Tus llaves, tu control" data-en="Your keys, your control">Tus llaves, tu control</p></div>
-<div class="fs-card"><div class="fs-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3 data-es="Desde $1 USDT" data-en="From $1 USDT">Desde $1 USDT</h3><p data-es="Acciones fraccionadas" data-en="Fractional shares">Acciones fraccionadas</p></div>
+<div class="fs-card"><div class="fs-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3 data-es="Desde $5 USDT" data-en="From $5 USDT">Desde $5 USDT</h3><p data-es="Acciones fraccionadas" data-en="Fractional shares">Acciones fraccionadas</p></div>
 <div class="fs-card"><div class="fs-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><h3 data-es="-30% fees" data-en="-30% fees">-30% fees</h3><p data-es="Por 6 meses para early adopters" data-en="For 6 months for early adopters">Por 6 meses para early adopters</p></div>
 </div></div></div></section>
 </main>
-<footer><div class="footer-inner"><div class="footer-left"><a href="/" class="footer-logo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div><p class="footer-copy" data-es="© 2026 Pasi. Todos los derechos reservados." data-en="© 2026 Pasi. All rights reserved.">© 2026 Pasi. Todos los derechos reservados.</p></div></footer>
+<footer><div class="footer-inner"><div class="footer-left"><a href="/" class="footer-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="20" style="display:block"><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div><p class="footer-copy" data-es="© 2026 Pasi. Todos los derechos reservados." data-en="© 2026 Pasi. All rights reserved.">© 2026 Pasi. Todos los derechos reservados.</p></div></footer>
 <script>
 const GOOGLE_SHEET_URL='https://script.google.com/macros/s/AKfycbxE5Yln6YW2LO3lCTjvZUMoeN4JJiPVCSDjPi1vkQ3R9Ak_vH4CJriJkHKD17lfqgQWiA/exec';
+const WAITLIST_COUNT_CACHE_KEY='pasi-waitlist-count';
+const waitlistCountPromise=(async()=>{try{const res=await fetch(GOOGLE_SHEET_URL);const data=await res.json();if(typeof data.count==='number'){localStorage.setItem(WAITLIST_COUNT_CACHE_KEY,data.count);return data.count}}catch(err){}const cached=localStorage.getItem(WAITLIST_COUNT_CACHE_KEY);return cached!==null?parseInt(cached,10):0})();
 async function submitWaitlist(){const email=document.getElementById('emailInput').value.trim();const btn=document.getElementById('submitBtn');if(!email||!email.includes('@')||!email.includes('.')){document.getElementById('emailInput').style.borderColor='#EF4444';setTimeout(()=>document.getElementById('emailInput').style.borderColor='',2000);return}btn.disabled=true;btn.textContent='...';try{await fetch(GOOGLE_SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})});document.getElementById('formWrapper').classList.add('hidden');setTimeout(()=>{document.getElementById('successState').classList.add('show')},300)}catch(err){document.getElementById('formWrapper').classList.add('hidden');setTimeout(()=>{document.getElementById('successState').classList.add('show')},300)}}
 document.getElementById('emailInput').addEventListener('keydown',function(e){if(e.key==='Enter')submitWaitlist()});
 function animateCounter(el,target,duration){const start=performance.now();function update(now){const p=Math.min((now-start)/duration,1);const eased=1-Math.pow(1-p,3);el.textContent=Math.round(eased*target);if(p<1)requestAnimationFrame(update)}requestAnimationFrame(update)}
 const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
-const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');const counter=entry.target.querySelector('#waitlistCount');if(counter&&!counter.dataset.animated){counter.dataset.animated='true';animateCounter(counter,47,1500)}}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');const counter=entry.target.querySelector('#waitlistCount');if(counter&&!counter.dataset.animated){counter.dataset.animated='true';waitlistCountPromise.then(count=>animateCounter(counter,count,1500))}}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 let currentLang=localStorage.getItem('pasi-lang')||'es';
 function applyLang(){document.documentElement.lang=currentLang;document.querySelectorAll('[data-es][data-en]').forEach(el=>{const t=el.getAttribute('data-'+currentLang);if(el.tagName==='INPUT')el.placeholder=t;else el.textContent=t})}
 if(currentLang!=='es')applyLang();
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>

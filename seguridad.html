@@ -56,7 +56,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#888888;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--gain:#22C55E;--loss:#EF4444;--font:'Inter',-apple-system,sans-serif}
+:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#B8B8B8;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--gain:#22C55E;--loss:#EF4444;--font:'Inter',-apple-system,sans-serif}
 html{scroll-behavior:smooth;background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body{background:var(--black);overflow-x:hidden}
 .container{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
@@ -75,7 +75,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .nav-links a{color:var(--gray);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--white)}
 .lang-toggle{background:var(--white-06);border:1px solid var(--white-10);color:var(--gray);font-family:var(--font);font-size:.75rem;font-weight:600;letter-spacing:.5px;padding:.375rem .75rem;border-radius:6px;cursor:pointer;transition:all .2s;text-transform:uppercase}
-.lang-toggle:hover{color:var(--white);border-color:var(--white-40)}
+.lang-toggle:hover{color:var(--white);border-color:#B8B8B8}
 .nav-cta{background:var(--white)!important;color:var(--black)!important;padding:.5rem 1.25rem;border-radius:8px;font-weight:600!important;font-size:.875rem!important}
 .mobile-menu-btn{display:none;background:none;border:none;color:var(--white);cursor:pointer;padding:.5rem;position:relative;z-index:101}
 .mobile-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:200}
@@ -94,11 +94,11 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 @media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}}
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--white);color:var(--black);font-family:var(--font);font-size:1rem;font-weight:600;padding:.875rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(255,255,255,0.1)}
-.page-hero{padding:10rem 0 6rem;position:relative}
-.page-hero::after{content:'';position:absolute;width:400px;height:400px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.04) 0%,transparent 70%);pointer-events:none}
+.page-hero{padding:10rem 0 6rem;position:relative;text-align:center}
+
 .page-hero .label{color:var(--aquamarine);margin-bottom:1.5rem}
-.page-hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:700px;margin-bottom:1.5rem;position:relative;z-index:1}
-.page-hero .sub{font-size:clamp(1.125rem,2vw,1.25rem);color:var(--white-40);max-width:520px;position:relative;z-index:1}
+.page-hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:700px;margin:0 auto 1.5rem;position:relative;z-index:1}
+.page-hero .sub{font-size:clamp(1.125rem,2vw,1.25rem);color:#B8B8B8;max-width:520px;margin:0 auto;position:relative;z-index:1}
 .pillars{padding:6rem 0}
 .pillar{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:6rem 0}
 .pillar+.pillar{border-top:1px solid var(--white-06)}
@@ -147,7 +147,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .compare-item:last-child{margin-bottom:0}
 .compare-icon{width:20px;height:20px;flex-shrink:0;margin-top:2px}
 .compare-item span{font-size:.875rem;color:var(--gray);line-height:1.5}
-.compare-col.pasi .compare-item span{color:var(--white-40)}
+.compare-col.pasi .compare-item span{color:#B8B8B8}
 .certs{padding:8rem 0}
 .certs h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;line-height:1.1;margin-bottom:1rem}
 .certs .sub{color:var(--gray);margin-bottom:4rem;font-size:.9375rem}
@@ -166,7 +166,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .final-cta{padding:10rem 0;text-align:center;position:relative}
 .final-cta::before{content:'';position:absolute;width:600px;height:600px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.04) 0%,transparent 70%);pointer-events:none}
 .final-cta h2{font-size:clamp(2.5rem,6vw,3.5rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:600px;margin:0 auto 1.5rem;position:relative;z-index:1}
-.final-cta .sub{color:var(--white-40);max-width:420px;margin:0 auto 2.5rem;font-size:1.125rem;position:relative;z-index:1}
+.final-cta .sub{color:#B8B8B8;max-width:420px;margin:0 auto 2.5rem;font-size:1.125rem;position:relative;z-index:1}
 .final-cta .btn-primary{position:relative;z-index:1}
 footer{border-top:1px solid var(--white-06);padding:3rem 0}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
@@ -228,16 +228,18 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 }
 </script>
 <!-- pasi-jsonld:end -->
+<!-- Vercel Web Analytics -->
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav id="nav" aria-label="Navegación principal"><div class="container"><div class="nav-inner">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <ul class="nav-links" id="navLinks">
 <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
 <li><a href="/como-funciona" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" class="active" data-es="Seguridad" data-en="Security">Seguridad</a></li>
-<li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
 <li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button></li>
 <li><a href="/waitlist" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
@@ -247,14 +249,14 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
 <div class="mobile-drawer" id="mobileDrawer">
 <div class="mobile-drawer-header">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <button class="mobile-drawer-close" onclick="closeMobileMenu()" aria-label="Close"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <ul>
 <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
 <li><a href="/como-funciona" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" class="active" data-es="Seguridad" data-en="Security">Seguridad</a></li>
-<li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
 <li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><a href="/waitlist" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
 </ul>
@@ -319,8 +321,8 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 
 </main>
 <footer><div class="container"><div class="footer-inner">
-<div class="footer-left"><a href="/" class="footer-logo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
-<ul class="footer-links"><li><a href="/como-funciona" data-es="Producto" data-en="Product">Producto</a></li><li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li><li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li></ul>
+<div class="footer-left"><a href="/" class="footer-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="20" style="display:block"><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
+<ul class="footer-links"><li><a href="/como-funciona" data-es="Producto" data-en="Product">Producto</a></li><li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li><li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li></ul>
 <p class="footer-copy" data-es="© 2026 Pasi. Todos los derechos reservados." data-en="© 2026 Pasi. All rights reserved.">© 2026 Pasi. Todos los derechos reservados.</p>
 </div></div></footer>
 
@@ -337,5 +339,6 @@ const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(ent
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>

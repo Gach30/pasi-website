@@ -56,7 +56,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#888888;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--gain:#22C55E;--font:'Inter',-apple-system,sans-serif}
+:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#B8B8B8;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--gain:#22C55E;--font:'Inter',-apple-system,sans-serif}
 html{scroll-behavior:smooth;background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body{background:var(--black);overflow-x:hidden}
 .container{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
@@ -94,10 +94,10 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--white);color:var(--black);font-family:var(--font);font-size:1rem;font-weight:600;padding:.875rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(255,255,255,0.1)}
 .page-hero{padding:10rem 0 6rem;text-align:center;position:relative}
-.page-hero::after{content:'';position:absolute;width:400px;height:400px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.04) 0%,transparent 70%);pointer-events:none}
+
 .page-hero .label{color:var(--aquamarine);margin-bottom:1.5rem}
 .page-hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;margin-bottom:1.5rem;position:relative;z-index:1}
-.page-hero .sub{font-size:clamp(1.125rem,2vw,1.25rem);color:var(--white-40);max-width:520px;margin:0 auto;position:relative;z-index:1}
+.page-hero .sub{font-size:clamp(1.125rem,2vw,1.25rem);color:#B8B8B8;max-width:520px;margin:0 auto;position:relative;z-index:1}
 .journey{padding:6rem 0}
 .journey-step{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:5rem 0}
 .journey-step+.journey-step{border-top:1px solid var(--white-06)}
@@ -157,7 +157,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .final-cta{padding:10rem 0;text-align:center;position:relative}
 .final-cta::before{content:'';position:absolute;width:600px;height:600px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.04) 0%,transparent 70%);pointer-events:none}
 .final-cta h2{font-size:clamp(2.5rem,6vw,3.5rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:600px;margin:0 auto 1.5rem;position:relative;z-index:1}
-.final-cta .sub{color:var(--white-40);max-width:420px;margin:0 auto 2.5rem;font-size:1.125rem;position:relative;z-index:1}
+.final-cta .sub{color:#B8B8B8;max-width:420px;margin:0 auto 2.5rem;font-size:1.125rem;position:relative;z-index:1}
 .final-cta .btn-primary{position:relative;z-index:1}
 footer{border-top:1px solid var(--white-06);padding:3rem 0}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
@@ -219,16 +219,18 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 }
 </script>
 <!-- pasi-jsonld:end -->
+<!-- Vercel Web Analytics -->
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav id="nav" aria-label="Navegación principal"><div class="container"><div class="nav-inner">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <ul class="nav-links" id="navLinks">
 <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
 <li><a href="/como-funciona" class="active" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li>
-<li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
 <li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button></li>
 <li><a href="/waitlist" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
@@ -238,14 +240,14 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
 <div class="mobile-drawer" id="mobileDrawer">
 <div class="mobile-drawer-header">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <button class="mobile-drawer-close" onclick="closeMobileMenu()" aria-label="Close"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <ul>
 <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
 <li><a href="/como-funciona" class="active" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li>
-<li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
 <li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><a href="/waitlist" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
 </ul>
@@ -302,7 +304,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 
 <!-- Step 3 -->
 <div class="journey-step">
-<div class="journey-text reveal"><p class="step-num">03</p><h2 data-es="Elige e invierte" data-en="Choose and Invest">Elige e invierte</h2><p data-es="Apple, Tesla, S&amp;P 500. Acciones fraccionadas desde $1 USDT." data-en="Apple, Tesla, S&amp;P 500. Fractional shares from $1 USDT.">Apple, Tesla, S&amp;P 500. Acciones fraccionadas desde $1 USDT.</p></div>
+<div class="journey-text reveal"><p class="step-num">03</p><h2 data-es="Elige e invierte" data-en="Choose and Invest">Elige e invierte</h2><p data-es="Apple, Tesla, S&amp;P 500. Acciones fraccionadas desde $5 USDT." data-en="Apple, Tesla, S&amp;P 500. Fractional shares from $5 USDT.">Apple, Tesla, S&amp;P 500. Acciones fraccionadas desde $5 USDT.</p></div>
 <div class="journey-visual reveal d2"><div class="j-phone-glow"></div><div class="j-phone"><div class="j-phone-notch"></div><div class="j-phone-screen">
 <div class="j-bar"><span>9:41</span><div class="j-bar-icons"><svg aria-hidden="true" width="12" height="8" viewBox="0 0 12 8" fill="white"><rect x="0" y="5" width="2" height="3" rx=".5"/><rect x="3" y="3" width="2" height="5" rx=".5"/><rect x="6" y="1" width="2" height="7" rx=".5"/><rect x="9" y="0" width="2" height="8" rx=".5"/></svg><svg aria-hidden="true" width="14" height="8" viewBox="0 0 14 8" fill="none" stroke="white" stroke-width=".8"><rect x=".5" y=".5" width="10" height="7" rx="1.5"/><rect x="11" y="2.5" width="2" height="3" rx=".5" fill="white"/><rect x="1.5" y="1.5" width="7" height="5" rx=".5" fill="white"/></svg></div></div>
 <div class="j-content">
@@ -325,7 +327,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <p class="label reveal" style="color:var(--gray);margin-bottom:1rem" data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</p>
 <h2 class="reveal d1" data-es="Lo que probablemente te estás preguntando." data-en="What you're probably wondering.">Lo que probablemente te estás preguntando.</h2>
 <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Necesito una cuenta en un banco de EE.UU.?" data-en="Do I need a U.S. bank account?">¿Necesito una cuenta en un banco de EE.UU.?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="No. Solo necesitas USDT y tu teléfono. Cero requisitos bancarios en EE.UU.." data-en="No. You just need USDT and your phone. Zero U.S. banking requirements.">No. Solo necesitas USDT y tu teléfono. Cero requisitos bancarios en EE.UU..</p></div></div>
-<div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Cuál es el mínimo para invertir?" data-en="What's the minimum to invest?">¿Cuál es el mínimo para invertir?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="$1 USDT. Acciones fraccionadas desde un dólar." data-en="$1 USDT. Fractional shares from one dollar.">$1 USDT. Acciones fraccionadas desde un dólar.</p></div></div>
+<div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Cuál es el mínimo para invertir?" data-en="What's the minimum to invest?">¿Cuál es el mínimo para invertir?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="$5 USDT. Acciones fraccionadas desde cinco dólares." data-en="$5 USDT. Fractional shares from five dollars.">$5 USDT. Acciones fraccionadas desde cinco dólares.</p></div></div>
 <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Estoy comprando acciones reales?" data-en="Am I buying real stocks?">¿Estoy comprando acciones reales?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Sí. Son acciones tokenizadas respaldadas 1:1 por activos reales. No son derivados ni simulaciones." data-en="Yes. They are tokenized shares backed 1:1 by real assets. They are not derivatives or simulations.">Sí. Son acciones tokenizadas respaldadas 1:1 por activos reales. No son derivados ni simulaciones.</p></div></div>
 <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Cuánto tarda en llegar mi USDT?" data-en="How long does my USDT take to arrive?">¿Cuánto tarda en llegar mi USDT?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Depósitos en USDT se confirman en minutos, dependiendo de la congestión de la red." data-en="USDT deposits are confirmed in minutes, depending on network congestion.">Depósitos en USDT se confirman en minutos, dependiendo de la congestión de la red.</p></div></div>
 <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span data-es="¿Qué pasa si Pasi desaparece?" data-en="What happens if Pasi disappears?">¿Qué pasa si Pasi desaparece?</span><svg aria-hidden="true" class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p data-es="Self-custody: tú controlas tus llaves. Si Pasi desaparece mañana, tu dinero sigue siendo tuyo." data-en="Self-custody: you control your keys. If Pasi disappears tomorrow, your money is still yours.">Self-custody: tú controlas tus llaves. Si Pasi desaparece mañana, tu dinero sigue siendo tuyo.</p></div></div>
@@ -340,8 +342,8 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 
 </main>
 <footer><div class="container"><div class="footer-inner">
-<div class="footer-left"><a href="/" class="footer-logo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
-<ul class="footer-links"><li><a href="/como-funciona" data-es="Producto" data-en="Product">Producto</a></li><li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li><li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li></ul>
+<div class="footer-left"><a href="/" class="footer-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="20" style="display:block"><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
+<ul class="footer-links"><li><a href="/como-funciona" data-es="Producto" data-en="Product">Producto</a></li><li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li><li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li></ul>
 <p class="footer-copy" data-es="© 2026 Pasi. Todos los derechos reservados." data-en="© 2026 Pasi. All rights reserved.">© 2026 Pasi. Todos los derechos reservados.</p>
 </div></div></footer>
 
@@ -358,5 +360,6 @@ function toggleFaq(btn){const item=btn.parentElement;item.classList.toggle('open
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>

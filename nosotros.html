@@ -56,7 +56,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#888888;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
+:root{--black:#050505;--surface:#111111;--grid:#222222;--gray:#B8B8B8;--white:#FFFFFF;--white-40:rgba(255,255,255,0.4);--white-10:rgba(255,255,255,0.1);--white-06:rgba(255,255,255,0.06);--aquamarine:#00E09E;--font:'Inter',-apple-system,sans-serif}
 html{scroll-behavior:smooth;background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body{background:var(--black);overflow-x:hidden}
 .container{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
@@ -93,41 +93,33 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 @media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}}
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--white);color:var(--black);font-family:var(--font);font-size:1rem;font-weight:600;padding:.875rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(255,255,255,0.1)}
-.page-hero{padding:12rem 0 8rem;position:relative;overflow:hidden}
-.page-hero .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;opacity:.2;mask-image:radial-gradient(ellipse 70% 50% at 50% 40%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 70% 50% at 50% 40%,black 20%,transparent 70%)}
-.page-hero .hero-glow{position:absolute;width:600px;height:600px;left:60%;top:30%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.06) 0%,transparent 60%);pointer-events:none}
+.page-hero{padding:12rem 0 8rem;position:relative;overflow:hidden;text-align:center}
+
+
 .page-hero .label{color:var(--aquamarine);margin-bottom:1.5rem;position:relative;z-index:1}
-.page-hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;letter-spacing:-2px;line-height:1.02;max-width:750px;margin-bottom:1.5rem;position:relative;z-index:1}
-.page-hero .sub{font-size:clamp(1.125rem,2vw,1.25rem);color:var(--white-40);max-width:540px;position:relative;z-index:1;line-height:1.6}
+.page-hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;letter-spacing:-2px;line-height:1.02;max-width:750px;margin:0 auto 1.5rem;position:relative;z-index:1}
+.page-hero .sub{font-size:clamp(1.125rem,2vw,1.25rem);color:#B8B8B8;max-width:540px;margin:0 auto;position:relative;z-index:1;line-height:1.6}
 .story{padding:8rem 0}
 .story-header{margin-bottom:4rem}
 .story-header h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;letter-spacing:-1px;line-height:1.1}
-.story-timeline{position:relative;max-width:800px}
-.story-timeline::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--aquamarine),rgba(0,224,158,0.15) 40%,var(--white-06) 70%,transparent)}
-.story-block{position:relative;padding-left:4rem;padding-bottom:4rem}
-.story-block:last-child{padding-bottom:0}
-.story-dot{position:absolute;left:16px;top:4px;width:18px;height:18px;border-radius:50%;background:var(--black);border:2px solid var(--white-06);z-index:2}
-.story-block.accent .story-dot{border-color:var(--aquamarine);box-shadow:0 0 20px rgba(0,224,158,0.25)}
-.story-block.accent .story-dot::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--aquamarine)}
-.story-year{font-size:.6875rem;font-weight:600;letter-spacing:.5px;color:var(--gray);text-transform:uppercase;margin-bottom:.5rem}
-.story-block h3{font-size:clamp(1.25rem,2.5vw,1.625rem);font-weight:700;letter-spacing:-.3px;margin-bottom:.75rem;line-height:1.25}
-.story-block p{color:var(--gray);font-size:.9375rem;line-height:1.7;max-width:580px}
-.story-block .accent-text{color:var(--aquamarine)}
+.story-simple{max-width:640px}
+.story-simple p{color:var(--gray);font-size:clamp(1rem,2vw,1.1875rem);line-height:1.7;margin-bottom:1.5rem}
+.story-simple p:last-child{margin-bottom:0}
 .team{padding:8rem 0;position:relative}
 .team h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;line-height:1.1;margin-bottom:.5rem}
 .team .sub{color:var(--gray);margin-bottom:4rem;font-size:.9375rem}
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:500px){.team-grid{grid-template-columns:1fr}}
-.team-card{background:linear-gradient(165deg,#151515 0%,var(--surface) 100%);border:1px solid var(--white-06);border-radius:18px;padding:2rem 1.75rem;position:relative;overflow:hidden;transition:border-color .4s,transform .4s}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:900px}
+@media(max-width:700px){.team-grid{grid-template-columns:1fr;max-width:480px}}
+.team-card{background:linear-gradient(165deg,#151515 0%,var(--surface) 100%);border:1px solid var(--white-06);border-radius:20px;padding:2.5rem 2.25rem;position:relative;overflow:hidden;transition:border-color .4s,transform .4s}
 .team-card:hover{border-color:rgba(0,224,158,0.15);transform:translateY(-3px)}
 .team-card::before{content:'';position:absolute;top:0;left:1.5rem;right:1.5rem;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,158,0.15),transparent)}
-.team-avatar{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,rgba(0,224,158,0.12),rgba(0,224,158,0.03));border:1px solid rgba(0,224,158,0.15);display:flex;align-items:center;justify-content:center;font-size:1.125rem;font-weight:700;color:var(--aquamarine);margin-bottom:1.25rem}
-.team-card.founder .team-avatar{width:68px;height:68px;border-radius:18px;font-size:1.25rem;background:linear-gradient(135deg,rgba(0,224,158,0.18),rgba(0,224,158,0.04));border-color:rgba(0,224,158,0.25)}
+.team-avatar{width:140px;height:140px;border-radius:24px;background:linear-gradient(135deg,rgba(0,224,158,0.12),rgba(0,224,158,0.03));border:1px solid rgba(0,224,158,0.15);overflow:hidden;margin-bottom:1.5rem}
+.team-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.team-card.founder .team-avatar{border-color:rgba(0,224,158,0.25)}
 .team-card.founder{border-color:rgba(0,224,158,0.1)}
-.team-name{font-size:1.0625rem;font-weight:700;margin-bottom:.25rem}
-.team-role{font-size:.75rem;color:var(--aquamarine);font-weight:600;letter-spacing:.3px;margin-bottom:.875rem;text-transform:uppercase}
-.team-bio{font-size:.8125rem;color:var(--gray);line-height:1.65}
+.team-name{font-size:1.3125rem;font-weight:700;margin-bottom:.25rem}
+.team-role{font-size:.8125rem;color:var(--aquamarine);font-weight:600;letter-spacing:.3px;margin-bottom:1rem;text-transform:uppercase}
+.team-bio{font-size:.9375rem;color:var(--gray);line-height:1.7}
 .values{padding:4rem 0 0}
 .values-header{padding:0 0 4rem}
 .values-header h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;line-height:1.1}
@@ -137,7 +129,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .value-block::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--white-06),transparent)}
 .value-inner{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 @media(max-width:768px){.value-inner{grid-template-columns:1fr;gap:2rem}}
-.value-left .value-num{font-size:clamp(5rem,10vw,8rem);font-weight:700;letter-spacing:-4px;line-height:.85;color:rgba(0,224,158,0.06);margin-bottom:1rem}
+.value-left .value-num{font-size:clamp(5rem,10vw,8rem);font-weight:700;letter-spacing:-4px;line-height:.85;color:rgba(0,224,158,0.35);margin-bottom:1rem}
 .value-left h3{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-.5px;line-height:1.15}
 .value-right p{font-size:1rem;color:var(--gray);line-height:1.7;max-width:440px}
 .value-right .value-accent{display:inline-block;margin-top:1.5rem;font-size:.75rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--aquamarine);padding:.375rem .875rem;border:1px solid rgba(0,224,158,0.15);border-radius:6px;background:rgba(0,224,158,0.04)}
@@ -149,7 +141,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .quote-carousel{position:relative;min-height:120px}
 .quote-slide{position:absolute;inset:0;opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease;pointer-events:none}
 .quote-slide.active{opacity:1;transform:translateY(0);pointer-events:auto;position:relative}
-.quote-text{font-size:clamp(1.0625rem,2vw,1.25rem);font-weight:500;letter-spacing:-.2px;line-height:1.65;color:var(--white-40)}
+.quote-text{font-size:clamp(1.0625rem,2vw,1.25rem);font-weight:500;letter-spacing:-.2px;line-height:1.65;color:#B8B8B8}
 .quote-dots{display:flex;gap:.5rem;margin-top:2rem;margin-bottom:2rem}
 .quote-dot{width:28px;height:3px;border-radius:2px;background:var(--white-10);cursor:pointer;transition:all .3s}
 .quote-dot.active{background:var(--aquamarine);width:40px}
@@ -160,7 +152,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .final-cta{padding:10rem 0;text-align:center;position:relative}
 .final-cta::before{content:'';position:absolute;width:600px;height:600px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.04) 0%,transparent 70%);pointer-events:none}
 .final-cta h2{font-size:clamp(2.5rem,6vw,3.5rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:600px;margin:0 auto 1.5rem;position:relative;z-index:1}
-.final-cta .sub{color:var(--white-40);max-width:420px;margin:0 auto 2.5rem;font-size:1.125rem;position:relative;z-index:1}
+.final-cta .sub{color:#B8B8B8;max-width:420px;margin:0 auto 2.5rem;font-size:1.125rem;position:relative;z-index:1}
 .final-cta .btn-primary{position:relative;z-index:1}
 footer{border-top:1px solid var(--white-06);padding:3rem 0}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
@@ -222,16 +214,18 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 }
 </script>
 <!-- pasi-jsonld:end -->
+<!-- Vercel Web Analytics -->
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav id="nav" aria-label="Navegación principal"><div class="container"><div class="nav-inner">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <ul class="nav-links" id="navLinks">
 <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
 <li><a href="/como-funciona" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li>
-<li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
 <li><a href="/nosotros" class="active" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button></li>
 <li><a href="/waitlist" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
@@ -241,21 +235,21 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
 <div class="mobile-drawer" id="mobileDrawer">
 <div class="mobile-drawer-header">
-<a href="/" class="nav-logo"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a>
+<a href="/" class="nav-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="28" style="display:block"><span class="logo-text">Pasi</span></a>
 <button class="mobile-drawer-close" onclick="closeMobileMenu()" aria-label="Close"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <ul>
 <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
 <li><a href="/como-funciona" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li>
-<li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li>
+<li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
 <li><a href="/nosotros" class="active" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><a href="/waitlist" class="nav-cta" data-es="Únete al waitlist" data-en="Join the Waitlist">Únete al waitlist</a></li>
 </ul>
 </div>
 
 <main id="main">
-<section class="page-hero"><div class="hero-grid"></div><div class="hero-glow"></div>
+<section class="page-hero">
 <div class="container">
 <p class="label reveal" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</p>
 <h1 class="reveal d1" data-es="El acceso que tu dinero necesita." data-en="The access your money needs.">El acceso que tu dinero necesita.</h1>
@@ -265,24 +259,19 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 
 <section class="story"><div class="container">
 <div class="story-header reveal"><p class="label" style="color:var(--gray);margin-bottom:1rem" data-es="Nuestra historia" data-en="Our Story">Nuestra historia</p><h2 data-es="Cómo llegamos aquí." data-en="How we got here.">Cómo llegamos aquí.</h2></div>
-<div class="story-timeline">
-<div class="story-block reveal"><div class="story-dot"></div><p class="story-year" data-es="El problema" data-en="The Problem">El problema</p><h3 data-es="Todo empezó con una frustración." data-en="It all started with a frustration.">Todo empezó con una frustración.</h3><p data-es="Quería invertir en el S&amp;P 500. Algo básico. Pero como venezolano, abrirte cuenta en un broker que te dé acceso al mercado de EE.UU. es una pesadilla. Y no era solo yo — amigos, conocidos, gente en foros, todos decían lo mismo." data-en="I wanted to invest in the S&amp;P 500. Something basic. But as a Venezuelan, opening an account with a broker that gives you access to the U.S. market is a nightmare. And it wasn't just me — friends, acquaintances, people in forums, everyone said the same thing.">Quería invertir en el S&amp;P 500. Algo básico. Pero como venezolano, abrirte cuenta en un broker que te dé acceso al mercado de EE.UU. es una pesadilla. Y no era solo yo — amigos, conocidos, gente en foros, todos decían lo mismo.</p></div>
-<div class="story-block reveal"><div class="story-dot"></div><p class="story-year" data-es="La infraestructura" data-en="The Infrastructure">La infraestructura</p><h3 data-es="La tecnología finalmente alcanzó al problema." data-en="Technology finally caught up with the problem.">La tecnología finalmente alcanzó al problema.</h3><p data-es="Con el tiempo, la infraestructura dio el paso necesario. Acciones tokenizadas, rieles de stablecoins — la solución técnica ya existía. Pero estaba envuelta en la complejidad de la blockchain. Lo que faltaba era una capa de accesibilidad y simplicidad." data-en="Over time, the infrastructure took the necessary step. Tokenized stocks, stablecoin rails — the technical solution already existed. But it was wrapped in blockchain complexity. What was missing was a layer of accessibility and simplicity.">Con el tiempo, la infraestructura dio el paso necesario. Acciones tokenizadas, rieles de stablecoins — la solución técnica ya existía. Pero estaba envuelta en la complejidad de la blockchain. Lo que faltaba era una capa de accesibilidad y simplicidad.</p></div>
-<div class="story-block reveal"><div class="story-dot"></div><p class="story-year" data-es="El momento" data-en="The Moment">El momento</p><h3 data-es="Un amigo me lo hizo ver claro." data-en="A friend made it crystal clear.">Un amigo me lo hizo ver claro.</h3><p data-es="Un amigo quería invertir en Chevron y no lograba abrirse cuenta en ningún broker. Le mencioné los activos tokenizados como alternativa. Su respuesta: «Algún día me explicas.» Nunca pasó. La solución existía, pero era demasiado compleja para el usuario común." data-en="A friend wanted to invest in Chevron but couldn't open an account with any broker. I mentioned tokenized assets as an alternative. His response: 'Someday you'll explain it to me.' It never happened. The solution existed, but it was too complex for the average user.">Un amigo quería invertir en Chevron y no lograba abrirse cuenta en ningún broker. Le mencioné los activos tokenizados como alternativa. Su respuesta: «Algún día me explicas.» Nunca pasó. La solución existía, pero era demasiado compleja para el usuario común.</p></div>
-<div class="story-block accent reveal"><div class="story-dot"></div><p class="story-year" data-es="La decisión" data-en="The Decision">La decisión</p><h3 data-es="Ahí nace Pasi." data-en="That's where Pasi was born.">Ahí nace Pasi.</h3><p><span data-es="Cuando me doy cuenta de que alguien tiene que agarrar esa tecnología y presentársela a los usuarios de una manera que se sienta fácil, accesible y segura." data-en="When I realized that someone had to take that technology and present it to users in a way that felt easy, accessible, and secure.">Cuando me doy cuenta de que alguien tiene que agarrar esa tecnología y presentársela a los usuarios de una manera que se sienta fácil, accesible y segura.</span> <span class="accent-text" data-es="De venezolanos, para venezolanos." data-en="By Venezuelans, for Venezuelans.">De venezolanos, para venezolanos.</span></p></div>
+<div class="story-simple reveal">
+<p data-es="Pasi es una plataforma de inversión no-custodia diseñada para permitir a Venezolanos el acceso a los mercados globales." data-en="Pasi is a non-custodial investment platform designed to give Venezuelans access to global markets.">Pasi es una plataforma de inversión no-custodia diseñada para permitir a Venezolanos el acceso a los mercados globales.</p>
+<p data-es="Actuamos como un puente entre tu dinero y los entes regulados y seguros que custodian los activos de EEUU." data-en="We act as a bridge between your money and the regulated, secure institutions that custody U.S. assets.">Actuamos como un puente entre tu dinero y los entes regulados y seguros que custodian los activos de EEUU.</p>
 </div></div></section>
 <div class="section-line"></div>
 
 <section class="team"><div class="container">
 <p class="label reveal" style="color:var(--gray);margin-bottom:1rem" data-es="El equipo" data-en="The Team">El equipo</p>
 <h2 class="reveal d1" data-es="Quiénes construyen Pasi." data-en="Who's building Pasi.">Quiénes construyen Pasi.</h2>
-<p class="sub reveal d2" data-es="5 venezolanos. Una misión." data-en="5 Venezuelans. One mission.">5 venezolanos. Una misión.</p>
+<p class="sub reveal d2" data-es="2 venezolanos. Una misión." data-en="2 Venezuelans. One mission.">2 venezolanos. Una misión.</p>
 <div class="team-grid">
-<div class="team-card founder reveal d1"><div class="team-avatar">GB</div><p class="team-name">Gabriel Bagdadi</p><p class="team-role" data-es="Fundador &amp; CEO" data-en="Founder &amp; CEO">Fundador &amp; CEO</p><p class="team-bio" data-es="Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi." data-en="Financial analysis, venture capital, and the Venezuelan economy. The frustration of not being able to invest in the S&amp;P 500 from Venezuela is what led him to build Pasi.">Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi.</p></div>
-<div class="team-card reveal d2"><div class="team-avatar">JG</div><p class="team-name">Jhonatan González</p><p class="team-role">CTO</p><p class="team-bio" data-es="CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo." data-en="CEO and founder of Dynamic Devs. The technical backbone of Pasi. Key in product architecture and team recruitment.">CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo.</p></div>
-<div class="team-card reveal d3"><div class="team-avatar">H</div><p class="team-name">Harold</p><p class="team-role" data-es="Asesor Blockchain" data-en="Blockchain Advisor">Asesor Blockchain</p><p class="team-bio" data-es="Infraestructura cripto y estrategia de integración con Solana." data-en="Crypto infrastructure and Solana integration strategy.">Infraestructura cripto y estrategia de integración con Solana.</p></div>
-<div class="team-card reveal d4"><div class="team-avatar">C</div><p class="team-name">César</p><p class="team-role" data-es="Desarrollador" data-en="Developer">Desarrollador</p><p class="team-bio" data-es="Amplia experiencia desarrollando en fintechs latinoamericanas. Talento y dedicación desde el día uno." data-en="Extensive experience building for Latin American fintechs. Talent and dedication from day one.">Amplia experiencia desarrollando en fintechs latinoamericanas. Talento y dedicación desde el día uno.</p></div>
-<div class="team-card reveal d5"><div class="team-avatar">S</div><p class="team-name">Silvestre</p><p class="team-role" data-es="Desarrollador" data-en="Developer">Desarrollador</p><p class="team-bio" data-es="Experiencia en fintechs de la región. Cada pantalla y cada flujo pensado desde la realidad venezolana." data-en="Experience in regional fintechs. Every screen and every flow designed from the Venezuelan reality.">Experiencia en fintechs de la región. Cada pantalla y cada flujo pensado desde la realidad venezolana.</p></div>
+<div class="team-card founder reveal d1"><div class="team-avatar"><img src="/team-gabriel.jpg" alt="Gabriel Bagdadi" width="140" height="140" loading="lazy"></div><p class="team-name">Gabriel Bagdadi</p><p class="team-role" data-es="Fundador &amp; CEO" data-en="Founder &amp; CEO">Fundador &amp; CEO</p><p class="team-bio" data-es="Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi." data-en="Financial analysis, venture capital, and the Venezuelan economy. The frustration of not being able to invest in the S&amp;P 500 from Venezuela is what led him to build Pasi.">Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi.</p></div>
+<div class="team-card reveal d2"><div class="team-avatar"><img src="/team-jhonatan.jpg" alt="Jonathan González" width="140" height="140" loading="lazy"></div><p class="team-name">Jonathan González</p><p class="team-role">CTO</p><p class="team-bio" data-es="CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo." data-en="CEO and founder of Dynamic Devs. The technical backbone of Pasi. Key in product architecture and team recruitment.">CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo.</p></div>
 </div></div></section>
 <div class="section-line"></div>
 
@@ -314,8 +303,8 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 
 </main>
 <footer><div class="container"><div class="footer-inner">
-<div class="footer-left"><a href="/" class="footer-logo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" stroke="#00E09E" stroke-width="1.5" fill="none"/><line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
-<ul class="footer-links"><li><a href="/como-funciona" data-es="Producto" data-en="Product">Producto</a></li><li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="/ayuda" data-es="Ayuda" data-en="Help">Ayuda</a></li><li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li></ul>
+<div class="footer-left"><a href="/" class="footer-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="20" style="display:block"><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
+<ul class="footer-links"><li><a href="/como-funciona" data-es="Producto" data-en="Product">Producto</a></li><li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li><li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li></ul>
 <p class="footer-copy" data-es="© 2026 Pasi. Todos los derechos reservados." data-en="© 2026 Pasi. All rights reserved.">© 2026 Pasi. Todos los derechos reservados.</p>
 </div></div></footer>
 
@@ -337,5 +326,6 @@ let autoPlay=setInterval(nextSlide,10000);
 document.querySelector('.quote-carousel').addEventListener('mouseenter',()=>clearInterval(autoPlay));
 document.querySelector('.quote-carousel').addEventListener('mouseleave',()=>{autoPlay=setInterval(nextSlide,10000)});
 </script>
+<script src="/particles.js"></script>
 </body>
 </html>
