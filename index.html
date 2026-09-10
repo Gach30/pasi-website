@@ -237,7 +237,8 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .team::before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--white-10),transparent)}
 .team .h1{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;line-height:1.1}
 .team-quote{font-size:clamp(1.25rem,2.5vw,1.75rem);font-weight:600;letter-spacing:-.3px;line-height:1.4;max-width:700px;padding-left:1.5rem;border-left:2px solid var(--aquamarine);margin-top:3rem}
-.team-attribution{color:var(--gray);margin-top:1rem;padding-left:1.5rem;font-size:.9375rem}
+.team-attribution{color:var(--gray);margin-top:1rem;padding-left:1.5rem;font-size:.9375rem;display:block;text-decoration:none;cursor:pointer;transition:color .2s}
+.team-attribution:hover{color:var(--aquamarine)}
 .final-cta{padding:10rem 0;text-align:center;position:relative}
 .final-cta::before{content:'';position:absolute;width:600px;height:600px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,224,158,0.04) 0%,transparent 70%);pointer-events:none}
 .final-cta .display{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:700px;margin:0 auto 1.5rem;position:relative;z-index:1}
@@ -570,7 +571,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <p class="label reveal" style="color:var(--gray);margin-bottom:1rem" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</p>
 <h2 class="h1 reveal reveal-delay-1" data-es="Construido por venezolanos que vivieron la misma exclusión." data-en="Built by Venezuelans who lived the same exclusion.">Construido por venezolanos que vivieron<br/>la misma exclusión.</h2>
 <blockquote class="team-quote reveal reveal-delay-2" data-es="Cada venezolano que ha intentado invertir y ha visto «país no soportado» sabe exactamente por qué existe Pasi." data-en="Every Venezuelan who has tried to invest and seen 'country not supported' knows exactly why Pasi exists.">Cada venezolano que ha intentado invertir y ha visto «país no soportado» sabe exactamente por qué existe Pasi.</blockquote>
-<p class="team-attribution reveal reveal-delay-3" data-es="— Gabriel Bagdadi, Fundador" data-en="— Gabriel Bagdadi, Founder">— Gabriel Bagdadi, Fundador</p>
+<a class="team-attribution reveal reveal-delay-3" href="https://www.linkedin.com/in/gabriel-bagdadi" target="_blank" rel="noopener" data-es="— Gabriel Bagdadi, Fundador" data-en="— Gabriel Bagdadi, Founder">— Gabriel Bagdadi, Fundador</a>
 </div>
 </section>
 
