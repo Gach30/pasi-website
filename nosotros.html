@@ -137,7 +137,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .team .sub{color:var(--gray);margin-bottom:4rem;font-size:.9375rem}
 .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:900px}
 @media(max-width:700px){.team-grid{grid-template-columns:1fr;max-width:480px}}
-.team-card{background:linear-gradient(165deg,#151515 0%,var(--surface) 100%);border:1px solid var(--white-06);border-radius:20px;padding:2.5rem 2.25rem;position:relative;overflow:hidden;transition:border-color .4s,transform .4s}
+.team-card{background:linear-gradient(165deg,#151515 0%,var(--surface) 100%);border:1px solid var(--white-06);border-radius:20px;padding:2.5rem 2.25rem;position:relative;overflow:hidden;transition:border-color .4s,transform .4s;display:block;text-decoration:none;color:inherit;cursor:pointer}
 .team-card:hover{border-color:rgba(0,224,158,0.15);transform:translateY(-3px)}
 .team-card::before{content:'';position:absolute;top:0;left:1.5rem;right:1.5rem;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,158,0.15),transparent)}
 .team-avatar{width:140px;height:140px;border-radius:24px;background:linear-gradient(135deg,rgba(0,224,158,0.12),rgba(0,224,158,0.03));border:1px solid rgba(0,224,158,0.15);overflow:hidden;margin-bottom:1.5rem}
@@ -172,7 +172,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .quote-dots{display:flex;gap:.5rem;margin-top:2rem;margin-bottom:2rem}
 .quote-dot{width:28px;height:3px;border-radius:2px;background:var(--white-10);cursor:pointer;transition:all .3s}
 .quote-dot.active{background:var(--aquamarine);width:40px}
-.quote-attr{display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--white-06)}
+.quote-attr{display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--white-06);text-decoration:none;color:inherit;cursor:pointer}
 .quote-attr-avatar{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(0,224,158,0.12),rgba(0,224,158,0.03));border:1px solid rgba(0,224,158,0.15);display:flex;align-items:center;justify-content:center;font-size:.875rem;font-weight:700;color:var(--aquamarine)}
 .quote-attr-name{font-size:.875rem;font-weight:600}
 .quote-attr-role{font-size:.75rem;color:var(--gray)}
@@ -304,8 +304,8 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <h2 class="reveal d1" data-es="Quiénes construyen Pasi." data-en="Who's building Pasi.">Quiénes construyen Pasi.</h2>
 <p class="sub reveal d2" data-es="2 venezolanos. Una misión." data-en="2 Venezuelans. One mission.">2 venezolanos. Una misión.</p>
 <div class="team-grid">
-<div class="team-card founder reveal d1"><div class="team-avatar"><img src="/team-gabriel.jpg" alt="Gabriel Bagdadi" width="140" height="140" loading="lazy"></div><p class="team-name">Gabriel Bagdadi</p><p class="team-role" data-es="Fundador &amp; CEO" data-en="Founder &amp; CEO">Fundador &amp; CEO</p><p class="team-bio" data-es="Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi." data-en="Financial analysis, venture capital, and the Venezuelan economy. The frustration of not being able to invest in the S&amp;P 500 from Venezuela is what led him to build Pasi.">Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi.</p></div>
-<div class="team-card reveal d2"><div class="team-avatar"><img src="/team-jhonatan.jpg" alt="Jonathan González" width="140" height="140" loading="lazy"></div><p class="team-name">Jonathan González</p><p class="team-role">CTO</p><p class="team-bio" data-es="CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo." data-en="CEO and founder of Dynamic Devs. The technical backbone of Pasi. Key in product architecture and team recruitment.">CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo.</p></div>
+<a class="team-card founder reveal d1" href="https://www.linkedin.com/in/gabriel-bagdadi" target="_blank" rel="noopener"><div class="team-avatar"><img src="/team-gabriel.jpg" alt="Gabriel Bagdadi" width="140" height="140" loading="lazy"></div><p class="team-name">Gabriel Bagdadi</p><p class="team-role" data-es="Fundador &amp; CEO" data-en="Founder &amp; CEO">Fundador &amp; CEO</p><p class="team-bio" data-es="Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi." data-en="Financial analysis, venture capital, and the Venezuelan economy. The frustration of not being able to invest in the S&amp;P 500 from Venezuela is what led him to build Pasi.">Análisis financiero, venture capital y economía venezolana. La frustración de no poder invertir en el S&amp;P 500 desde Venezuela es lo que lo llevó a construir Pasi.</p></a>
+<a class="team-card reveal d2" href="https://www.linkedin.com/in/jongon/" target="_blank" rel="noopener"><div class="team-avatar"><img src="/team-jhonatan.jpg" alt="Jonathan González" width="140" height="140" loading="lazy"></div><p class="team-name">Jonathan González</p><p class="team-role">CTO</p><p class="team-bio" data-es="CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo." data-en="CEO and founder of Dynamic Devs. The technical backbone of Pasi. Key in product architecture and team recruitment.">CEO y fundador de Dynamic Devs. El pilar técnico de Pasi. Clave en arquitectura de producto y reclutamiento del equipo.</p></a>
 </div></div></section>
 <div class="section-line"></div>
 
@@ -325,7 +325,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <div class="quote-slide"><p class="quote-text" data-es="Ya invertir en sí mismo es suficientemente complejo. Acceder a la inversión debería ser el paso sencillo, fácil de dar." data-en="Investing itself is already complex enough. Accessing investment should be the easy step, the simple one to take.">Ya invertir en sí mismo es suficientemente complejo. Acceder a la inversión debería ser el paso sencillo, fácil de dar.</p></div>
 </div>
 <div class="quote-dots" id="quoteDots"><div class="quote-dot active" onclick="goToSlide(0)"></div><div class="quote-dot" onclick="goToSlide(1)"></div><div class="quote-dot" onclick="goToSlide(2)"></div><div class="quote-dot" onclick="goToSlide(3)"></div></div>
-<div class="quote-attr"><div class="quote-attr-avatar">GB</div><div><p class="quote-attr-name">Gabriel Bagdadi</p><p class="quote-attr-role" data-es="Fundador, Pasi" data-en="Founder, Pasi">Fundador, Pasi</p></div></div>
+<a class="quote-attr" href="https://www.linkedin.com/in/gabriel-bagdadi" target="_blank" rel="noopener"><div class="quote-attr-avatar">GB</div><div><p class="quote-attr-name">Gabriel Bagdadi</p><p class="quote-attr-role" data-es="Fundador, Pasi" data-en="Founder, Pasi">Fundador, Pasi</p></div></a>
 </div></div></section>
 <div class="section-line"></div>
 
