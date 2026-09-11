@@ -178,7 +178,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .faq-question:hover{color:var(--aquamarine)}
 .faq-chevron{width:20px;height:20px;transition:transform .3s;flex-shrink:0;color:var(--gray)}
 .faq-item.open .faq-chevron{transform:rotate(180deg);color:var(--aquamarine)}
-.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .28s ease,padding .22s ease}
 .faq-item.open .faq-answer{max-height:200px;padding-bottom:1.5rem}
 .faq-answer p{color:var(--gray);font-size:.9375rem;max-width:700px}
 .final-cta{padding:10rem 0;text-align:center;position:relative}
@@ -389,7 +389,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 
 <script>
 let currentLang=localStorage.getItem('pasi-lang')||'es';
-function applyLang(){document.documentElement.lang=currentLang;const btn=document.getElementById('langToggle');if(btn)btn.textContent=currentLang==='es'?'EN':'ES';document.querySelectorAll('[data-es][data-en]').forEach(el=>{const t=el.getAttribute('data-'+currentLang);if(el.tagName==='INPUT')el.placeholder=t;else el.textContent=t})}
+function applyLang(){document.documentElement.lang=currentLang;const btn=document.getElementById('langToggle');if(btn)btn.textContent=currentLang==='es'?'EN':'ES';document.querySelectorAll('[data-es][data-en]').forEach(el=>{const t=el.getAttribute('data-'+currentLang);if(el.tagName==='INPUT')el.placeholder=t;else el.textContent=t});document.querySelectorAll('.faq-item.open').forEach(setFaqAnswerHeight)}
 function toggleLang(){currentLang=currentLang==='es'?'en':'es';localStorage.setItem('pasi-lang',currentLang);applyLang()}
 if(currentLang!=='es')applyLang();
 const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
@@ -397,7 +397,8 @@ function toggleMobileMenu(){document.getElementById('mobileDrawer').classList.to
 function closeMobileMenu(){document.getElementById('mobileDrawer').classList.remove('open');document.getElementById('mobileOverlay').classList.remove('open');document.body.style.overflow=''}
 document.querySelectorAll('.mobile-drawer a').forEach(l=>l.addEventListener('click',closeMobileMenu));
 function faqScrollOffset(){const nav=document.querySelector('nav');return (nav?nav.offsetHeight:0)+16}
-function toggleFaq(btn){const item=btn.parentElement;const opening=!item.classList.contains('open');item.classList.toggle('open');if(!opening)return;const offset=faqScrollOffset();const answer=item.querySelector('.faq-answer');const r=item.getBoundingClientRect();const expandedBottom=r.bottom+Math.min(answer.scrollHeight,300)+24;if(expandedBottom>window.innerHeight||r.top<offset){window.scrollTo({top:r.top+window.scrollY-offset,behavior:'smooth'})}}
+function setFaqAnswerHeight(item){const a=item.querySelector('.faq-answer');a.style.maxHeight=item.classList.contains('open')?(a.scrollHeight+28)+'px':''}
+function toggleFaq(btn){const item=btn.parentElement;const answer=item.querySelector('.faq-answer');const opening=!item.classList.contains('open');item.classList.toggle('open');setFaqAnswerHeight(item);if(!opening)return;const offset=faqScrollOffset();const r=item.getBoundingClientRect();const overflow=(r.bottom+answer.scrollHeight+28)-(window.innerHeight-80);const maxUp=r.top-offset;if(overflow>0&&maxUp>0){window.scrollBy({top:Math.min(overflow,maxUp),behavior:'smooth'})}else if(r.top<offset){window.scrollBy({top:r.top-offset,behavior:'smooth'})}}
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
