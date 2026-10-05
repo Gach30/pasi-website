@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/waitlist",
+      "destination": "https://app.pasi.capital",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
