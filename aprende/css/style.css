@@ -267,12 +267,13 @@ input[type="range"]::-moz-range-thumb {
 .grabado { margin-inline: auto; }
 .grabado img { margin-inline: auto; }
 
-/* Portrait placeholder for Gabriel (swap for a real photo later) */
+/* Gabriel's engraved portrait (img/gabriel.webp), inside an upright oval like the one on a banknote.
+   The picture is pinned to the oval's edges so it fills it the same way in every browser. */
 .retrato {
   position: relative; flex: none; width: 3.4rem; aspect-ratio: 4 / 5; border-radius: 50%;
-  border: 1.5px solid var(--tinta); background: var(--papel); overflow: hidden;
+  border: 1.5px solid var(--tinta); background: var(--espuma); overflow: hidden;
 }
-.retrato svg { width: 100%; height: 100%; }
+.retrato img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
 .retrato--grande { width: 6.5rem; }
 
 /* A scroll scene. Static by default; section 9 pins it when animation is on.
