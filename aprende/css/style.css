@@ -188,15 +188,16 @@ strong { font-weight: 650; }
 .termino { font-weight: 650; }   /* a term being defined for the first time */
 
 .nota { font-size: .8125rem; line-height: 1.45; }
-/* Source buttons: the small numbered circles after a figure. The circle you see is about 20 px across,
+/* Source buttons: the small numbered circles after a figure. They are 1.2 times their first size
+   (letter .84 of the text instead of .70): the bigger version was too much. The circle stays small,
    but the area that answers to a finger is about 45 px (the invisible ::after around it). */
-.cita { font-size: max(.7em, .6875rem); line-height: 0; vertical-align: super; margin-left: .15em; }
+.cita { font-size: .84em; line-height: 0; vertical-align: super; margin-left: .1em; }
 .cita a {
-  position: relative; display: inline-block; min-width: 1.75em; margin-block: -.4em; padding: 0 .35em;
-  border: 1.5px solid currentColor; border-radius: 999px; background: color-mix(in srgb, currentColor 12%, transparent);
-  text-align: center; text-decoration: none; line-height: 1.55; font-weight: 650;
+  position: relative; display: inline-block; min-width: 1.45em; margin-block: -.2em; padding: 0 .3em;
+  border: 1px solid currentColor; border-radius: 999px;
+  text-align: center; text-decoration: none; line-height: 1.4; font-weight: 600;
 }
-.cita a::after { content: ""; position: absolute; inset: -.8rem -.75rem; }
+.cita a::after { content: ""; position: absolute; inset: -.85rem -.8rem; }
 
 /* Act divider: a strip between acts */
 .acto {
@@ -429,30 +430,23 @@ input[type="range"]::-moz-range-thumb {
    the face on show tips away until it is edge-on, then the other face tips in. */
 .excusa__giro { position: relative; display: grid; perspective: 60rem; }
 .excusa__frente, .excusa__dorso {
-  grid-area: 1 / 1; min-height: 8.8rem; margin: 0; padding: 1rem 1.1rem .9rem;
+  grid-area: 1 / 1; min-height: 8.8rem; margin: 0; padding: 1rem 1.1rem;
   border: 2px solid var(--tinta); border-radius: var(--radio);
   cursor: pointer; -webkit-tap-highlight-color: transparent;
 }
 .excusa__frente {
-  display: grid; grid-template-columns: 5rem 1fr; grid-template-rows: 1fr auto; column-gap: 1rem; row-gap: .5rem; align-items: center; width: 100%;
+  display: grid; grid-template-columns: 5rem 1fr; column-gap: 1rem; align-items: center; width: 100%;
   background: var(--papel); color: var(--tinta); text-align: left; box-shadow: 5px 5px 0 var(--agua); --foco: var(--agua);
   transition: transform .26s cubic-bezier(.2, .7, .3, 1) .26s, visibility 0s .26s, translate .1s, box-shadow .1s;    /* coming back: the second half */
 }
 .excusa__frente img { max-height: 5rem; width: auto; justify-self: center; }
 .excusa__frase { font-family: var(--serif); font-size: 1.9rem; line-height: 1.02; }
 .excusa__dorso {
-  display: grid; grid-template-rows: 1fr auto; row-gap: .5rem; align-items: center; background: var(--agua); color: var(--tinta);
+  display: grid; align-content: center; background: var(--agua); color: var(--tinta);
   font-size: 1.0625rem; line-height: 1.4; font-weight: 500; box-shadow: 5px 5px 0 var(--papel); --foco: var(--papel);
   transform: rotateX(-90deg); visibility: hidden;
   transition: transform .26s cubic-bezier(.6, 0, .9, .4), visibility 0s .26s, translate .1s, box-shadow .1s;         /* leaving: the first half */
 }
-/* The label on each face that says "you can tap this": it looks like a small button sitting on the card */
-.excusa__toca {
-  grid-column: 1 / -1; justify-self: end; display: inline-flex; align-items: center; gap: .4rem;
-  padding: .34rem .8rem .34rem .6rem; border-radius: 999px; background: var(--tinta); color: var(--papel);
-  font-family: var(--sans); font-size: .8125rem; font-weight: 650; line-height: 1.2;
-}
-.excusa__toca svg { flex: none; width: 1rem; height: 1rem; }
 /* The card answers to the finger: it sinks when pressed, and lifts under a mouse */
 .excusa__frente:active { translate: 3px 3px; box-shadow: 2px 2px 0 var(--agua); }
 .excusa__dorso:active  { translate: 3px 3px; box-shadow: 2px 2px 0 var(--papel); }
@@ -475,7 +469,7 @@ input[type="range"]::-moz-range-thumb {
 /* without JavaScript nothing turns: the excuse and its answer are shown one under the other */
 html:not(.con-js) .excusa__giro { display: block; }
 html:not(.con-js) .excusa__dorso { transform: none; visibility: visible; margin-top: .6rem; }
-html:not(.con-js) .excusas__pista, html:not(.con-js) .excusa__toca { display: none; }
+html:not(.con-js) .excusas__pista { display: none; }
 html:not(.con-js) .excusa__frente, html:not(.con-js) .excusa__dorso { cursor: auto; }
 
 /* --- Chapter 4: four jobs for your money + the basket --- */
