@@ -131,7 +131,9 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .hero .display{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:800px;margin:0 auto 1.5rem}
 .hero-sub{font-size:clamp(1.125rem,2vw,1.375rem);color:#B8B8B8;max-width:560px;margin:0 auto 2.5rem;line-height:1.5}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
-.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;pointer-events:none}
+@media(max-width:768px){.hero-scroll{display:none}}
+@media(max-width:768px) and (max-height:600px){.hero{padding-top:4.5rem}.hero-tagline{margin-bottom:.75rem}.hero .display{margin-bottom:1rem}.hero-sub{margin-bottom:1.25rem}.hero-ctas{gap:.5rem .75rem}.hero-ctas a{padding:.75rem 1.5rem}}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gray),transparent);animation:scrollPulse 2s ease-in-out infinite}
 @keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
 .stats-section{padding:10rem 0 8rem;position:relative}
@@ -212,8 +214,9 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .feature-icon{width:22px;height:22px;color:var(--white)}
 .feature-card .h3{font-size:1.125rem;font-weight:600;letter-spacing:-.3px;margin-bottom:.5rem}
 .feature-card .body{color:var(--gray);font-size:.9375rem}
-.feature-cta{margin-top:1.25rem;padding:.7rem 1.25rem;font-size:.9375rem;font-weight:600;color:var(--aquamarine);border-color:rgba(0,224,158,0.45)}
-.feature-cta:hover{border-color:var(--aquamarine);background:rgba(0,224,158,0.08)}
+.btn-aqua{font-weight:600;color:var(--aquamarine);border-color:rgba(0,224,158,0.45)}
+.btn-aqua:hover{border-color:var(--aquamarine);background:rgba(0,224,158,0.08)}
+.feature-cta{margin-top:1.25rem;padding:.7rem 1.25rem;font-size:.9375rem}
 .education{padding:8rem 0;position:relative}
 .education::before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--white-10),transparent)}
 .education-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:4rem}
@@ -383,6 +386,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <div class="hero-ctas reveal reveal-delay-3">
 <a href="https://app.pasi.capital" class="btn-primary" data-es="Regístrate" data-en="Sign Up">Regístrate</a>
 <a href="#como-funciona" class="btn-secondary" data-es="Cómo funciona" data-en="How it works">Cómo funciona</a>
+<a href="/aprende" class="btn-secondary btn-aqua" data-es="Aprende a invertir" data-en="Learn to invest (in Spanish)">Aprende a invertir</a>
 </div>
 </div>
 <div class="hero-scroll reveal reveal-delay-4"><div class="scroll-line"></div></div>
@@ -566,7 +570,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <div class="features-grid">
 <div class="feature-card reveal reveal-delay-1"><div class="feature-icon-wrap"><svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10h-10z" fill="currentColor" opacity=".3"/><line x1="12" y1="12" x2="12" y2="2"/><line x1="12" y1="12" x2="22" y2="12"/></svg></div><h3 class="h3" data-es="Acciones fraccionadas desde $5" data-en="Fractional shares from $5">Acciones fraccionadas desde $5</h3><p class="body" data-es="Empieza con $5. Construye a tu ritmo." data-en="Start with $5. Build at your pace.">Empieza con $5. Construye a tu ritmo.</p></div>
 <div class="feature-card reveal reveal-delay-2"><div class="feature-icon-wrap"><svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="h3" data-es="Stablecoins como base" data-en="Stablecoin-native">Stablecoins como base</h3><p class="body" data-es="Usa el USDT o USDC que ya tienes. Tu dinero, tu control." data-en="Use the USDT or USDC you already have. Your money, your control.">Usa el USDT o USDC que ya tienes. Tu dinero, tu control.</p></div>
-<div class="feature-card reveal reveal-delay-3"><div class="feature-icon-wrap"><svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3 class="h3" data-es="Educación en tu idioma" data-en="Education in your language">Educación en tu idioma</h3><p class="body" data-es="Pensada para venezolanos, no traducida del inglés." data-en="Designed for Venezuelans, not translated from English.">Pensada para venezolanos, no traducida del inglés.</p><a href="/aprende" class="btn-secondary feature-cta" data-es="Aprende a invertir" data-en="Learn to invest (in Spanish)">Aprende a invertir</a></div>
+<div class="feature-card reveal reveal-delay-3"><div class="feature-icon-wrap"><svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3 class="h3" data-es="Educación en tu idioma" data-en="Education in your language">Educación en tu idioma</h3><p class="body" data-es="Pensada para venezolanos, no traducida del inglés." data-en="Designed for Venezuelans, not translated from English.">Pensada para venezolanos, no traducida del inglés.</p><a href="/aprende" class="btn-secondary btn-aqua feature-cta" data-es="Aprende a invertir" data-en="Learn to invest (in Spanish)">Aprende a invertir</a></div>
 <div class="feature-card reveal reveal-delay-4"><div class="feature-icon-wrap"><svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3 class="h3" data-es="Self-custody real" data-en="True self-custody">Self-custody real</h3><p class="body" data-es="Tus llaves, tus activos. Nadie congela tu dinero." data-en="Your keys, your assets. Nobody freezes your money.">Tus llaves, tus activos. Nadie congela tu dinero.</p></div>
 </div>
 </div>
