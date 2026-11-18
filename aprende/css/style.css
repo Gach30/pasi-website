@@ -188,16 +188,16 @@ strong { font-weight: 650; }
 .termino { font-weight: 650; }   /* a term being defined for the first time */
 
 .nota { font-size: .8125rem; line-height: 1.45; }
-/* Source buttons: the small numbered circles after a figure. They are 1.2 times their first size
-   (letter .84 of the text instead of .70): the bigger version was too much. The circle stays small,
-   but the area that answers to a finger is about 45 px (the invisible ::after around it). */
-.cita { font-size: .84em; line-height: 0; vertical-align: super; margin-left: .1em; }
+/* Source buttons: the small numbered circles after a figure. Sized like a footnote mark (letter .62 of
+   the text). History: .70 at first, then .84, which Gabriel found too big (18 Nov 2026). The circle is
+   small, but the area that answers to a finger is over 40 px (the invisible ::after around it). */
+.cita { font-size: .62em; line-height: 0; vertical-align: super; margin-left: .1em; }
 .cita a {
-  position: relative; display: inline-block; min-width: 1.45em; margin-block: -.2em; padding: 0 .3em;
+  position: relative; display: inline-block; min-width: 1.35em; margin-block: -.2em; padding: 0 .25em;
   border: 1px solid currentColor; border-radius: 999px;
-  text-align: center; text-decoration: none; line-height: 1.4; font-weight: 600;
+  text-align: center; text-decoration: none; line-height: 1.35; font-weight: 600;
 }
-.cita a::after { content: ""; position: absolute; inset: -.85rem -.8rem; }
+.cita a::after { content: ""; position: absolute; inset: -.95rem -1rem; }
 
 /* Act divider: a strip between acts */
 .acto {
