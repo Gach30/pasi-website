@@ -85,3 +85,4 @@ User-agent: MistralAI-User
 Allow: /
 
 Sitemap: https://pasi.capital/sitemap.xml
+Sitemap: https://pasi.capital/blog/sitemap.xml

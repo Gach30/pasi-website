@@ -1077,3 +1077,8 @@ html:not(.con-js) .excusa__frente, html:not(.con-js) .excusa__dorso { cursor: au
   *, *::before, *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; transition-delay: 0s !important; }
   .lluvia::before { animation: none; }
 }
+
+/* Enlaces al blog */
+.quiz-blog a, .cierre__blog a { color: inherit; text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1.5px; }
+.quiz-blog a:hover, .cierre__blog a:hover { text-decoration-thickness: 2.5px; }
+.cierre__blog { max-width: 34rem; text-align: center; font-size: 1.0625rem; line-height: 1.5; }
