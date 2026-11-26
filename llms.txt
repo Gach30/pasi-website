@@ -6,33 +6,68 @@
 
 - [Homepage](https://pasi.capital/): Main marketing site (Spanish).
 - [How Pasi works](https://pasi.capital/como-funciona): Step-by-step explanation of how to invest in U.S. stocks from Venezuela using USDT or USDC.
-- [Security and custody](https://pasi.capital/seguridad): Self-custody architecture, segregated funds, on-chain transparency, and compliance posture.
+- [Security and custody](https://pasi.capital/seguridad): Non-custodial architecture (each user has a wallet in their own name, created with Privy), on-chain transparency, and compliance posture.
 - [Help / FAQ](https://pasi.capital/ayuda): Common questions about Pasi, xStocks, stablecoin deposits, fees, withdrawals, and Solana settlement.
 - [About / Team](https://pasi.capital/nosotros): Built by Venezuelans who lived through the same financial exclusion they're solving.
-- [Waitlist](https://pasi.capital/waitlist): Early access signup.
+- [Web app](https://app.pasi.capital): Sign up and invest from the phone's browser.
 
 ## Education
 
 - [Cómo empezar a invertir](https://pasi.capital/aprende): A five-minute beginner's guide in Spanish by Gabriel Bagdadi, founder of Pasi, for Venezuelans who already save in dollars and want to start investing. Covers inflation, stocks, bonds, ETFs, compound interest, and how to recognize an investment scam. Educational content with cited sources.
+- [Blog de Pasi](https://pasi.capital/blog): Spanish-language articles on investing in the U.S. stock market with digital dollars, how Pasi works, and step-by-step guides. RSS feed: https://pasi.capital/blog/feed.xml
+
+## Blog articles (Spanish)
+
+### Invertir en EE.UU.
+
+- [Cómo comprar acciones de EE.UU. con bolívares](https://pasi.capital/blog/comprar-acciones-de-eeuu-con-bolivares): Invierte tus bolívares en acciones y ETFs de EE.UU.: cómo cambiarlos a USDT o USDC, enviarlos a tu billetera de Pasi, cuánto cuesta y cómo volver a bolívares.
+- [Interactive Brokers y Hapi en Venezuela: ¿se puede?](https://pasi.capital/blog/por-que-venezolanos-no-pueden-usar-interactive-brokers-ni-hapi): Qué pasó con Hapi en Venezuela, por qué Interactive Brokers no acepta residentes venezolanos, qué tienen que ver las sanciones y el GAFI, y qué opciones quedan.
+- [Invertir en EE.UU. desde Venezuela: apps que sí funcionan](https://pasi.capital/blog/plataformas-para-invertir-en-acciones-de-eeuu-desde-venezuela): Muchas listas recomiendan brokers que no aceptan residentes en Venezuela. Revisamos cuáles sí funcionan en 2026, cuáles no y cómo comprobarlo tú mismo.
+- [Pasi vs Binance vs Quantfury: cuál conviene (2026)](https://pasi.capital/blog/pasi-vs-binance-vs-quantfury): Pasi, Binance y Quantfury para invertir en acciones de EE.UU. desde Venezuela: qué compras, acceso, mínimos, comisiones, custodia y para quién es cada una.
+- [Pasi: invertir en acciones de EE.UU. desde Venezuela](https://pasi.capital/blog/pasi-app-para-invertir-en-acciones-de-eeuu-desde-venezuela): Qué es Pasi, cómo funciona, qué puedes comprar, cuánto cuesta y quién está detrás de la app para invertir en acciones y ETFs de EE.UU. desde Venezuela.
+- [¿Es seguro invertir con Pasi? Lo que sí y lo que no](https://pasi.capital/blog/es-seguro-invertir-con-pasi): Una respuesta honesta: dónde está tu dinero en Pasi, qué pasa si Pasi cierra, cómo se protege tu cuenta, qué respalda lo que compras y qué riesgos sí existen.
+
+### Guías de Pasi
+
+- [Cómo activar el 2FA en Pasi y proteger tu cuenta](https://pasi.capital/blog/como-activar-2fa-en-pasi): Activa el 2FA en Pasi con Google Authenticator o Authy, guarda tus códigos de recuperación y aprende qué hacer si cambias de teléfono.
+- [Cómo depositar en Pasi desde Binance, paso a paso](https://pasi.capital/blog/como-depositar-en-pasi-desde-binance): Envía USDT o USDC desde Binance a tu billetera de Pasi por la red Solana: los botones exactos, cuánto cuesta, cuánto tarda y qué errores evitar.
+- [Cómo depositar en Pasi desde Kontigo, paso a paso](https://pasi.capital/blog/como-depositar-en-pasi-desde-kontigo): Envía USDC desde Kontigo a tu billetera de Pasi por la red Base: los botones exactos, por qué conviene USDC y no USDT, cuánto cuesta y qué hacer si no llega.
+- [Cómo verificar tu identidad en Pasi: requisitos y pasos](https://pasi.capital/blog/como-verificar-tu-identidad-en-pasi): Qué documento necesitas, cómo verificar tu identidad en Pasi antes de tu primer depósito, qué significa cada estado y qué hacer si te la rechazan.
+- [¿Se puede depositar en bolívares en Pasi?](https://pasi.capital/blog/depositos-en-bolivares-en-pasi): ¿Se puede depositar en bolívares en Pasi? Lo que hay hoy, lo que viene y las dos formas de invertir con tus bolívares ahora mismo: Binance P2P y Kontigo.
+
+### Educación financiera
+
+- [Fondos indexados vs. acciones: ¿qué conviene al empezar?](https://pasi.capital/blog/fondos-indexados-vs-acciones-individuales): ¿Comprar Apple o un ETF del S&P 500? Lo que dicen los datos sobre elegir acciones vs. invertir en el índice, y cómo combinarlos si estás empezando a invertir.
+- [Invertir en la Bolsa de Caracas: cómo y si conviene (2026)](https://pasi.capital/blog/invertir-en-la-bolsa-de-caracas): Cómo funciona la Bolsa de Caracas, cuánto ha rendido en bolívares y en dólares, cuánto cuesta invertir y qué riesgos tiene frente a la bolsa de EE.UU.
+- [Perfil de inversor: cómo saber cuál es el tuyo](https://pasi.capital/blog/como-saber-tu-perfil-de-inversor): Antes de tu primera compra, define tu perfil de inversor: tu horizonte, cuánto riesgo puedes asumir y cuánto aguantas. Incluye un test rápido de 5 preguntas.
+- [¿Cuánto rinde el S&P 500 al año? Casi 100 años de datos](https://pasi.capital/blog/que-retornos-esperar-de-la-bolsa-de-eeuu): Cuánto ha rendido el S&P 500 en promedio, por qué casi ningún año se parece al promedio, cuánto duran las caídas y qué parte del retorno se lleva la inflación.
+- [¿Qué es un ETF y un fondo indexado? Explicado fácil](https://pasi.capital/blog/que-es-un-etf-y-un-fondo-indexado): Qué es un índice, qué es un fondo indexado y qué es un ETF, en qué se diferencian, ejemplos como VOO, SPY y QQQ, y qué mirar antes de comprar uno.
+
+### Cómo funciona Pasi
+
+- [Plataforma no custodia: qué significa y por qué importa](https://pasi.capital/blog/que-significa-plataforma-no-custodia): Custodia vs. no-custodia explicado en simple: quién controla tu dinero, qué pasa si la empresa cierra y cómo funciona la billetera a tu nombre en Pasi.
+- [¿Qué es Privy y qué tiene que ver con Pasi?](https://pasi.capital/blog/que-es-privy-y-que-tiene-que-ver-con-pasi): Privy, la empresa de billeteras digitales de Stripe, crea tu billetera en Pasi. Cómo protege tu llave privada, quién puede mover tu dinero y cómo exportarla.
+- [¿Qué son las acciones tokenizadas y cómo funcionan?](https://pasi.capital/blog/que-son-las-acciones-tokenizadas): Qué es una acción tokenizada, cómo se respalda 1:1 con acciones reales, qué pasa con los dividendos, quién la emite y qué riesgos tiene.
 
 ## Concepts
 
-Pasi gives retail users access to tokenized U.S. equities and ETFs from two sources:
-
-- **xStocks** — issued by Backed Finance, a Swiss-regulated entity, 1:1 backed by underlying shares custodied with a regulated broker.
-- **Tokenized assets from Ondo** — including Ondo's tokenized U.S. Treasuries and other on-chain assets.
+Most assets on Pasi are **xStocks**: tokenized U.S. stocks and ETFs issued by Backed (owned by Kraken), 1:1 backed by underlying shares custodied with a regulated broker.
 
 All assets settle on Solana via the Jupiter aggregator. Users fund accounts with USDC or USDT and gain on-chain price exposure to companies like Apple, Tesla, NVIDIA, and ETFs like SPY — without needing a U.S. bank account or a traditional broker.
 
 Pasi plans to eventually integrate the Bolsa de Caracas (Caracas Stock Exchange) to expand access to local Venezuelan equities.
 
+## Deposits
+
+Users deposit USDT or USDC from Binance, Kontigo or any digital wallet. Identity verification (KYC) is required once, before the first deposit. Deposits in bolívares or other local currencies are not available yet.
+
 ## Withdrawals
 
-Users can withdraw USDT or USDC to external wallets, or to accounts on Binance, Kontigo, or Crixto. Withdrawals can also be converted to bolívares.
+Users withdraw USDT or USDC on the Solana network to external wallets or to exchanges such as Binance. Withdrawals to Kontigo or in local currency are not available yet.
 
 ## Fees
 
-Pasi charges 0.98 USD per trade or 0.5% of the trade amount, whichever is higher.
+Pasi charges 0.5% of each trade or 1 USD, whichever is higher, and never more than 2.5% of the trade. The first purchase of an asset, on orders under 18 USD, carries a one-time opening fee of 0.35 to 0.45 USD. Withdrawals cost a flat 1 USD. Opening an account is free; there are no monthly or inactivity fees.
 
 ## Target audience
 

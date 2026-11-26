@@ -118,7 +118,7 @@ nav.scrolled{background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);border-botto
 .mobile-drawer a{color:var(--gray);text-decoration:none;font-size:1rem;font-weight:500;transition:color .2s}
 .mobile-drawer a:hover,.mobile-drawer a.active{color:var(--white)}
 .mobile-drawer .nav-cta{display:inline-block;background:var(--white);color:var(--black);padding:.75rem 1.5rem;border-radius:8px;font-weight:600;font-size:.875rem;margin-top:1rem;text-align:center}
-@media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}}
+@media(max-width:1023px){.nav-links{display:none}.mobile-menu-btn{display:block}}
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--white);color:var(--black);font-family:var(--font);font-size:1rem;font-weight:600;padding:.875rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(255,255,255,0.1)}
 .page-hero{padding:10rem 0 6rem;position:relative;text-align:center}
@@ -211,7 +211,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 @media(max-width:768px){.footer-inner{flex-direction:column;text-align:center}.footer-left{flex-direction:column}}
 .skip-link{position:absolute;left:-9999px;top:0;background:var(--aquamarine);color:var(--black);padding:.75rem 1.25rem;font-weight:600;text-decoration:none;z-index:1000}
 .skip-link:focus{left:0}
-</style>
+.guias{padding:4rem 0;position:relative}.guias::before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--white-10),transparent)}.guias-titulo{font-size:1.25rem;font-weight:600;letter-spacing:-.3px;line-height:1.3;margin:0 0 1.25rem}.guias-lista{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.75rem}.guias-lista a{display:inline-block;padding:.65rem 1.1rem;border:1px solid var(--white-10);border-radius:999px;color:var(--white);font-size:.9375rem;line-height:1.3;text-decoration:none;transition:border-color .2s,color .2s}.guias-lista a:hover{border-color:var(--aquamarine);color:var(--aquamarine)}.guias-lista a:focus-visible,.guias-todas:focus-visible{outline:2px solid var(--aquamarine);outline-offset:3px}.guias-todas{display:inline-block;margin-top:1.5rem;color:var(--aquamarine);font-size:.9375rem;font-weight:600;text-decoration:none;transition:opacity .2s}.guias-todas:hover{opacity:.7}</style>
 <!-- pasi-jsonld:start -->
 <script type="application/ld+json">
 {
@@ -274,6 +274,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <li><a href="/como-funciona" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" class="active" data-es="Seguridad" data-en="Security">Seguridad</a></li>
 <li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
+<li><a href="/blog" data-es="Blog" data-en="Blog">Blog</a></li>
 <li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button></li>
 <li><a href="https://app.pasi.capital" class="nav-cta" data-es="Regístrate" data-en="Sign Up">Regístrate</a></li>
@@ -291,6 +292,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 <li><a href="/como-funciona" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</a></li>
 <li><a href="/seguridad" class="active" data-es="Seguridad" data-en="Security">Seguridad</a></li>
 <li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
+<li><a href="/blog" data-es="Blog" data-en="Blog">Blog</a></li>
 <li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li>
 <li><a href="https://app.pasi.capital" class="nav-cta" data-es="Regístrate" data-en="Sign Up">Regístrate</a></li>
 </ul>
@@ -347,6 +349,14 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 </div></div></section>
 <div class="section-line"></div>
 
+<section class="guias">
+<div class="container-narrow">
+<h2 class="guias-titulo" data-es="Para leer con calma" data-en="Further reading (in Spanish)">Para leer con calma</h2>
+<ul class="guias-lista"><li><a href="/blog/es-seguro-invertir-con-pasi" data-es="¿Está tu dinero seguro en Pasi?" data-en="Is your money safe in Pasi?">¿Está tu dinero seguro en Pasi?</a></li><li><a href="/blog/que-significa-plataforma-no-custodia" data-es="Qué significa no-custodia" data-en="What non-custodial means">Qué significa no-custodia</a></li><li><a href="/blog/que-es-privy-y-que-tiene-que-ver-con-pasi" data-es="Qué es Privy" data-en="What Privy is">Qué es Privy</a></li><li><a href="/blog/como-activar-2fa-en-pasi" data-es="Cómo activar el 2FA" data-en="How to turn on 2FA">Cómo activar el 2FA</a></li></ul>
+<a href="/blog" class="guias-todas" data-es="Ver todos los artículos del blog" data-en="See all blog articles">Ver todos los artículos del blog</a>
+</div>
+</section>
+
 <section class="final-cta" id="waitlist"><div class="container-narrow">
 <h2 class="reveal" data-es="Invierte tranquilo." data-en="Invest with peace of mind.">Invierte tranquilo.</h2>
 <p class="sub reveal d1" data-es="Regístrate. Tu dinero, tu control." data-en="Sign up. Your money, your control.">Regístrate. Tu dinero, tu control.</p>
@@ -356,7 +366,7 @@ footer{border-top:1px solid var(--white-06);padding:3rem 0}
 </main>
 <footer><div class="container"><div class="footer-inner">
 <div class="footer-left"><a href="/" class="footer-logo"><img src="/logo-pasi.png" alt="Pasi logo" height="20" style="display:block"><span class="logo-text">Pasi</span></a><span class="footer-tagline" data-es="Invierte sin fronteras." data-en="Invest without borders.">Invierte sin fronteras.</span></div>
-<ul class="footer-links"><li><a href="/como-funciona" data-es="Producto" data-en="Product">Producto</a></li><li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li><li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li><li><a href="/aprende" data-es="Aprende a invertir" data-en="Learn to invest">Aprende a invertir</a></li></ul>
+<ul class="footer-links"><li><a href="/como-funciona" data-es="Producto" data-en="Product">Producto</a></li><li><a href="/seguridad" data-es="Seguridad" data-en="Security">Seguridad</a></li><li><a href="/ayuda" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li><li><a href="/nosotros" data-es="Sobre Pasi" data-en="About Pasi">Sobre Pasi</a></li><li><a href="/aprende" data-es="Aprende a invertir" data-en="Learn to invest">Aprende a invertir</a></li><li><a href="/blog" data-es="Blog" data-en="Blog">Blog</a></li></ul>
 <div class="footer-social">
 <a href="https://www.instagram.com/pasi.app" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.014 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.897 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.897-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
 <a href="https://www.tiktok.com/@pasiapp" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
